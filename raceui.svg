@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="app" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 200" style="enable-background:new 0 0 1000 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.87;fill:#E6E6E6;}
+	.st1{fill:#CCCCCC;}
+	.st2{opacity:0.42;fill:#CCCCCC;}
+	.st3{fill:#0071BC;}
+	.st4{font-family:'Calibri';}
+	.st5{font-size:12px;}
+	.st6{fill:#808080;}
+	.st7{font-size:14px;}
+	.st8{font-size:24px;}
+	.st9{font-size:120px;}
+	.st10{fill:#ED1C24;}
+	.st11{fill:#B3B3B3;}
+	.st12{fill:#00FF00;}
+	.st13{fill:#FF0000;}
+	.st14{fill:#00FFFF;}
+</style>
+<rect class="st0" width="1000" height="200"/>
+<rect id="rpm" x="191.07" y="11" class="st1" width="680.59" height="11.84"/>
+<g id="brake_x5F_temps">
+	<rect x="885.47" y="11" class="st2" width="107.95" height="89.47"/>
+	<text id="brake_x5F_fl" transform="matrix(1 0 0 1 899.7781 37.974)" class="st3 st4 st5">32C</text>
+	<text id="brake_x5F_rr" transform="matrix(1 0 0 1 963.4233 84.6264)" class="st3 st4 st5">32C</text>
+	<text id="brake_x5F_rl" transform="matrix(1 0 0 1 899.7784 84.6262)" class="st3 st4 st5">32C</text>
+	<text id="brake_x5F_fr" transform="matrix(1 0 0 1 963.4231 37.9738)" class="st3 st4 st5">32C</text>
+</g>
+<rect id="filler" x="191.07" y="11" class="st6" width="286.18" height="11.84"/>
+<text id="max_x5F_rpm" transform="matrix(1 0 0 1 848.6317 37.3158)" class="st4 st5">8K</text>
+<text id="units" transform="matrix(1 0 0 1 84.4457 69.8289)" class="st4 st7">km/h</text>
+<text id="speed" transform="matrix(1 0 0 1 84.4456 51.1314)" class="st4 st8">60</text>
+<text id="gear" transform="matrix(1 0 0 1 10.474 86.0003)" class="st4 st9">1</text>
+<text id="rpm_1_" transform="matrix(1 0 0 1 84.4457 22.8419)" class="st4 st7">3000 RPM</text>
+<rect id="top_x5F_rpm" x="848.63" y="11" class="st10" width="23.03" height="11.84"/>
+<g id="pedals">
+	<rect id="clutch" x="19.68" y="97.28" class="st11" width="14.47" height="63.22"/>
+	<rect id="gas" x="61.42" y="97.28" class="st11" width="14.47" height="63.22"/>
+	<rect id="brake" x="40.33" y="97.28" class="st11" width="14.47" height="63.22"/>
+</g>
+<rect id="gas_x5F_filler" x="61.42" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 137.3125 257.7696)" class="st12" width="14.47" height="63.22"/>
+<rect id="brake_x5F_filler" x="40.78" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 96.0296 257.7696)" class="st13" width="14.47" height="63.22"/>
+<rect id="clutch_x5F_filler_1_" x="19.68" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 53.8421 257.7696)" class="st14" width="14.47" height="63.22"/>
+</svg>

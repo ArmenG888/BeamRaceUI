@@ -1,0 +1,17 @@
+{
+  "domElement": "<simple-time></simple-time>",
+  "name": "RaceUI",
+  "types": [
+    "ui.apps.categories.utility"
+  ],
+  "description": "RaceUI",
+  "css": {
+    "left": "0px",
+    "top": "0px",
+    "height": "200px",
+    "width": "1000px"
+  },
+  "author": "ArmenG",
+  "version": "0.1",
+  "directive": "RaceUI"
+}
