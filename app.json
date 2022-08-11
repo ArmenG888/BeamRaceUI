@@ -1,5 +1,5 @@
 {
-  "domElement": "<simple-time></simple-time>",
+  "domElement": "<raceui></raceui>",
   "name": "RaceUI",
   "types": [
     "ui.apps.categories.utility"
@@ -8,8 +8,8 @@
   "css": {
     "left": "0px",
     "top": "0px",
-    "height": "200px",
-    "width": "1000px"
+    "height": "150px",
+    "width": "1170px"
   },
   "author": "ArmenG",
   "version": "0.1",

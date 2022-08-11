@@ -1,5 +1,5 @@
 angular.module('beamng.apps')
-	.directive('simpleTime', [function () {
+	.directive('raceui', [function () {
 		return {
 			template:
 				'<object style="width:100%; height:100%; box-sizing:border-box; pointer-events: none" type="image/svg+xml" data="/ui/modules/apps/raceui/raceui.svg"></object>',
@@ -7,15 +7,6 @@ angular.module('beamng.apps')
 			restrict: 'EA',
 			link: function (scope, element, attrs) {
 				StreamsManager.add(['engineInfo','electrics']);
-
-				scope.bigGear = ' - ';
-				scope.ltlGear = '';
-		
-				var gearNames = ['P', 'R', 'N', 'D', '2', '1'];
-		
-				scope.$on('VehicleReset', function () {
-				  scope.ltlGear = ' - ';
-				});
 				scope.$on('$destroy', function () {
 					StreamsManager.remove(['electrics']);
 				});
@@ -25,19 +16,26 @@ angular.module('beamng.apps')
 					let values = []
 		
 					scope.$on('streamsUpdate', function (event, streams, data) {
+						brakes = [];
+						for (i in streams.wheelThermalData.wheels) {
+							brakes.push(i);
+						}
+
+						brakes.sort(); 
 						if (streams.engineInfo[1] !== values[1] || streams.engineInfo[0] !== values[0]) {
 							values[0] = streams.engineInfo[0]; //rpm idle
 							values[1] = streams.engineInfo[1]; //rpm max
-							svg.getElementById('max_x5F_rpm').innerHTML = values[1];
+							svg.getElementById('max_x5F_rpm').innerHTML = values[1]/1000 + "k";
 						}
 						let rpm = Math.round(Number(streams.engineInfo[4]));
-						svg.getElementById('rpm_1_').innerHTML = rpm;
+						svg.getElementById('rpm_x5F_text').innerHTML = rpm;
 						svg.getElementById('filler').setAttribute("width", (657.566 * rpm/values[1])) ;
-						if(rpm > values[1] * 0.95) { //we are near redline, red
+						if(rpm > values[1] * 0.95) { 
 							rgb = '(255,0,0)'
 							rgb_filler = '(255,0,0)';
 						}
-						else if(rpm > values[1] * 0.9) { //we are near redline, red
+						else if(rpm > values[1] * 0.9) { 
+							
 							rgb = '(255,255,0)'
 							rgb_filler = '(255,255,0)';
 						} 
@@ -47,6 +45,7 @@ angular.module('beamng.apps')
 						}
 						svg.getElementById('filler').style.fill = 'rgb' + rgb_filler
 						svg.getElementById('gear').style.fill = 'rgb' + rgb
+						
 						var speedMs = streams.electrics.wheelspeed;
 						if (isNaN(speedMs)) speedMs = streams.electrics.airspeed;
 						var speedConverted = UiUnits.speed(speedMs);
@@ -73,20 +72,38 @@ angular.module('beamng.apps')
 						svg.getElementById('brake_x5F_text').innerHTML = brakeVal
 						//svg.getElementById('clutch_x5F_text').innerHTML = 0
 						
-						svg.getElementById('fuel_x5F_filler').setAttribute("width",(streams.electrics.fuel*80.368))
+						svg.getElementById('fuel_x5F_filler_1_').setAttribute("width",(streams.electrics.fuel*80.368))
 						
-						svg.getElementById('fuel_1_').innerHTML = "Fuel: " + Math.round(streams.electrics.fuel*100) + "%"
+						svg.getElementById('fuel_2_').innerHTML = "Fuel: " + Math.round(streams.electrics.fuel*100) + "%"
 						
 						if (streams.engineThermalData) {
 							//svg.getElementById('boost_x5F_filler').setAttribute("width",(streams.engineThermalData.forcedInductionInfo.boost*80.368))
-							svg.getElementById('temps_x5F_filler').setAttribute("width",(streams.engineThermalData.coolantTemperature/120*80.368))
-							svg.getElementById('temps_1_').innerHTML = "Temp: " + Math.round(streams.engineThermalData.coolantTemperature) + "C"
+							svg.getElementById('temps_x5F_filler_1_').setAttribute("width",(streams.engineThermalData.coolantTemperature/120*80.368))
+							svg.getElementById('temps_2_').innerHTML = "Temp: " + Math.round(streams.engineThermalData.coolantTemperature) + "C"
 							// = streams.engineThermalData.forcedInductionInfo.boost 
-							console.log(streams.engineThermalData.coolantTemperature);
 						  }
 						if (streams.forcedInductionInfo) {
 							//svg.getElementById('boost_x5F_filler').setAttribute("width",Math.round(streams.forcedInductionInfo.boost/100)*80.368)
-							svg.getElementById('boost_1_').innerHTML = Math.round(streams.forcedInductionInfo.boost)/100 + " bar";
+							svg.getElementById('boost_2_').innerHTML = Math.round(streams.forcedInductionInfo.boost)/100 + " bar";
+						}
+						var currentDate = new Date();
+						var currentHour = currentDate.getHours();
+						var currentMinute = currentDate.getMinutes();
+
+						if (currentMinute < 10) {
+							currentMinute = "0" + currentMinute;
+						}
+
+						currentTime = currentHour + ":" + currentMinute;
+						svg.getElementById('time').innerHTML = "Clock:" + currentTime;
+						for (i = 0; i < brakes.length; i++) { //changes the colour of the disks and text according to their values
+							if (streams.wheelThermalData.wheels[brakes[i]] != null) {
+							  svg.getElementById('brake'+i).innerHTML = Math.round(UiUnits.temperature(streams.wheelThermalData.wheels[brakes[i]].brakeSurfaceTemperature).val)+
+							   UiUnits.temperature(streams.wheelThermalData.wheels[brakes[i]].brakeSurfaceTemperature).unit;
+							}
+							else {
+							  return;
+							}
 						}
 					});
 					
