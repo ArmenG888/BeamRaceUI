@@ -15,21 +15,24 @@
 	.st9{font-size:120px;}
 	.st10{fill:#ED1C24;}
 	.st11{fill:#B3B3B3;}
-	.st12{fill:#00FF00;}
+	.st12{fill:#00FFFF;}
 	.st13{fill:#FF0000;}
-	.st14{fill:#00FFFF;}
+	.st14{fill:#00FF00;}
+	.st15{fill:#F7931E;}
+	.st16{fill:#2E3192;}
+	.st17{font-size:36px;}
 </style>
 <rect class="st0" width="1000" height="200"/>
 <rect id="rpm" x="191.07" y="11" class="st1" width="680.59" height="11.84"/>
 <g id="brake_x5F_temps">
-	<rect x="885.47" y="11" class="st2" width="107.95" height="89.47"/>
-	<text id="brake_x5F_fl" transform="matrix(1 0 0 1 899.7781 37.974)" class="st3 st4 st5">32C</text>
-	<text id="brake_x5F_rr" transform="matrix(1 0 0 1 963.4233 84.6264)" class="st3 st4 st5">32C</text>
-	<text id="brake_x5F_rl" transform="matrix(1 0 0 1 899.7784 84.6262)" class="st3 st4 st5">32C</text>
-	<text id="brake_x5F_fr" transform="matrix(1 0 0 1 963.4231 37.9738)" class="st3 st4 st5">32C</text>
+	<rect x="919.71" y="11.51" class="st2" width="75" height="50"/>
+	<text id="brake_x5F_fl" transform="matrix(1 0 0 1 924.778 25.9831)" class="st3 st4 st5">32C</text>
+	<text id="brake_x5F_rr" transform="matrix(1 0 0 1 971.3183 53.5564)" class="st3 st4 st5">32C</text>
+	<text id="brake_x5F_rl" transform="matrix(1 0 0 1 924.778 53.5562)" class="st3 st4 st5">32C</text>
+	<text id="brake_x5F_fr" transform="matrix(1 0 0 1 971.318 25.9832)" class="st3 st4 st5">32C</text>
 </g>
 <rect id="filler" x="191.07" y="11" class="st6" width="286.18" height="11.84"/>
-<text id="max_x5F_rpm" transform="matrix(1 0 0 1 848.6317 37.3158)" class="st4 st5">8K</text>
+<text id="max_x5F_rpm" transform="matrix(1 0 0 1 876.2633 19.5526)" class="st4 st5">8K</text>
 <text id="units" transform="matrix(1 0 0 1 84.4457 69.8289)" class="st4 st7">km/h</text>
 <text id="speed" transform="matrix(1 0 0 1 84.4456 51.1314)" class="st4 st8">60</text>
 <text id="gear" transform="matrix(1 0 0 1 10.474 86.0003)" class="st4 st9">1</text>
@@ -39,8 +42,30 @@
 	<rect id="clutch" x="19.68" y="97.28" class="st11" width="14.47" height="63.22"/>
 	<rect id="gas" x="61.42" y="97.28" class="st11" width="14.47" height="63.22"/>
 	<rect id="brake" x="40.33" y="97.28" class="st11" width="14.47" height="63.22"/>
+	
+		<rect id="clutch_x5F_filler_1_" x="19.68" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 53.8421 257.7696)" class="st12" width="14.47" height="63.22"/>
+	
+		<rect id="brake_x5F_filler" x="40.78" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 96.0296 257.7696)" class="st13" width="14.47" height="63.22"/>
+	
+		<rect id="gas_x5F_filler" x="61.42" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 137.3125 257.7696)" class="st14" width="14.47" height="63.22"/>
+	<text id="clutch_x5F_text" transform="matrix(1 0 0 1 14.9739 172.085)" class="st4 st7">100</text>
+	<text id="brake_x5F_text" transform="matrix(1 0 0 1 36.6841 172.085)" class="st4 st7">100</text>
+	<text id="gas_x5F_text" transform="matrix(1 0 0 1 58.6597 172.085)" class="st4 st7">100</text>
 </g>
-<rect id="gas_x5F_filler" x="61.42" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 137.3125 257.7696)" class="st12" width="14.47" height="63.22"/>
-<rect id="brake_x5F_filler" x="40.78" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 96.0296 257.7696)" class="st13" width="14.47" height="63.22"/>
-<rect id="clutch_x5F_filler_1_" x="19.68" y="97.28" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 53.8421 257.7696)" class="st14" width="14.47" height="63.22"/>
+<g id="engine_x5F_info">
+	<rect id="temps" x="791.29" y="65.72" class="st1" width="80.37" height="12.5"/>
+	<rect id="boost" x="791.29" y="93.75" class="st1" width="80.37" height="12.5"/>
+	<rect id="fuel" x="791.29" y="40.79" class="st1" width="80.37" height="12.5"/>
+	<rect id="boost_x5F_filler" x="791.29" y="93.75" class="st15" width="80.37" height="12.5"/>
+	<rect id="temps_x5F_filler" x="791.29" y="65.72" class="st13" width="80.37" height="12.5"/>
+	<rect id="fuel_x5F_filler" x="791.29" y="40.79" class="st16" width="80.37" height="12.5"/>
+	<text id="fuel_1_" transform="matrix(1 0 0 1 791.2897 36.5092)" class="st4 st5">Fuel: 50/50L </text>
+	<text id="temps_1_" transform="matrix(1 0 0 1 791.2897 62.9999)" class="st4 st5">Temp: 90C</text>
+	<text id="boost_1_" transform="matrix(1 0 0 1 791.2899 89.2897)" class="st4 st5">Boost: 1.2 bar</text>
+</g>
+<g id="lap_x5F_times">
+	<text id="best_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0658 86.0003)" class="st4 st7">Best: 2:20.642</text>
+	<text id="last_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0658 69.8288)" class="st4 st7">Last: 2:21.829</text>
+	<text id="current" transform="matrix(1 0 0 1 191.0658 53.2856)" class="st4 st17">1:25.354</text>
+</g>
 </svg>

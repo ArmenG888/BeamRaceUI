@@ -33,6 +33,20 @@ angular.module('beamng.apps')
 						let rpm = Math.round(Number(streams.engineInfo[4]));
 						svg.getElementById('rpm_1_').innerHTML = rpm;
 						svg.getElementById('filler').setAttribute("width", (657.566 * rpm/values[1])) ;
+						if(rpm > values[1] * 0.95) { //we are near redline, red
+							rgb = '(255,0,0)'
+							rgb_filler = '(255,0,0)';
+						}
+						else if(rpm > values[1] * 0.9) { //we are near redline, red
+							rgb = '(255,255,0)'
+							rgb_filler = '(255,255,0)';
+						} 
+						else { //normal rpm, green
+							rgb = '(0,0,0)';
+							rgb_filler = '(128,128,128)';
+						}
+						svg.getElementById('filler').style.fill = 'rgb' + rgb_filler
+						svg.getElementById('gear').style.fill = 'rgb' + rgb
 						var speedMs = streams.electrics.wheelspeed;
 						if (isNaN(speedMs)) speedMs = streams.electrics.airspeed;
 						var speedConverted = UiUnits.speed(speedMs);
@@ -52,9 +66,28 @@ angular.module('beamng.apps')
 							, brakeVal    = Math.round(streams.electrics.brake * 100)
 							, throttleVal = Math.round(streams.electrics.throttle * 100)
 						;
-						svg.getElementById('gas_x5F_filler').setAttribute("height", throttleVal/100*63.217);
-						svg.getElementById('brake_x5F_filler').setAttribute("height", brakeVal/100*63.217);
-						svg.getElementById('clutch_x5F_filer').setAttribute("height", clutchVal/100*63.217);
+						svg.getElementById('gas_x5F_filler').setAttribute("height", throttleVal/100*63.217)
+						svg.getElementById('brake_x5F_filler').setAttribute("height", brakeVal/100*63.217)
+						//svg.getElementById('clutch_x5F_filer').setAttribute("height", 0)
+						svg.getElementById('gas_x5F_text').innerHTML = throttleVal
+						svg.getElementById('brake_x5F_text').innerHTML = brakeVal
+						//svg.getElementById('clutch_x5F_text').innerHTML = 0
+						
+						svg.getElementById('fuel_x5F_filler').setAttribute("width",(streams.electrics.fuel*80.368))
+						
+						svg.getElementById('fuel_1_').innerHTML = "Fuel: " + Math.round(streams.electrics.fuel*100) + "%"
+						
+						if (streams.engineThermalData) {
+							//svg.getElementById('boost_x5F_filler').setAttribute("width",(streams.engineThermalData.forcedInductionInfo.boost*80.368))
+							svg.getElementById('temps_x5F_filler').setAttribute("width",(streams.engineThermalData.coolantTemperature/120*80.368))
+							svg.getElementById('temps_1_').innerHTML = "Temp: " + Math.round(streams.engineThermalData.coolantTemperature) + "C"
+							// = streams.engineThermalData.forcedInductionInfo.boost 
+							console.log(streams.engineThermalData.coolantTemperature);
+						  }
+						if (streams.forcedInductionInfo) {
+							//svg.getElementById('boost_x5F_filler').setAttribute("width",Math.round(streams.forcedInductionInfo.boost/100)*80.368)
+							svg.getElementById('boost_1_').innerHTML = Math.round(streams.forcedInductionInfo.boost)/100 + " bar";
+						}
 					});
 					
 				});
