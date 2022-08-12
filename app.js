@@ -6,15 +6,19 @@ angular.module('beamng.apps')
 			replace: true,
 			restrict: 'EA',
 			link: function (scope, element, attrs) {
-				StreamsManager.add(['engineInfo','electrics']);
-				scope.$on('$destroy', function () {
-					StreamsManager.remove(['electrics']);
-				});
-		
+				
+				StreamsManager.add(['engineInfo','electrics','engineThermalData']);
+				
+				scope.laps = 0
+				new_lap = false;
+				var totalDistance = parseFloat(sessionStorage.getItem('apps:simpleTrip.totalDistance')) || 0;
+									timer=1;
+									prevTime = performance.now();
+									curTime = prevTime;
 				element.on('load', function () {
 					let svg = element[0].contentDocument
 					let values = []
-		
+					
 					scope.$on('streamsUpdate', function (event, streams, data) {
 						brakes = [];
 						for (i in streams.wheelThermalData.wheels) {
@@ -28,7 +32,7 @@ angular.module('beamng.apps')
 							svg.getElementById('max_x5F_rpm').innerHTML = values[1]/1000 + "k";
 						}
 						let rpm = Math.round(Number(streams.engineInfo[4]));
-						svg.getElementById('rpm_x5F_text').innerHTML = rpm;
+						svg.getElementById('rpm_x5F_text').innerHTML = rpm + " RPM";
 						svg.getElementById('filler').setAttribute("width", (657.566 * rpm/values[1])) ;
 						if(rpm > values[1] * 0.95) { 
 							rgb = '(255,0,0)'
@@ -52,6 +56,7 @@ angular.module('beamng.apps')
 						if(speedConverted === null) return;
 						var speedUnits = Math.round(speedConverted.val);
 						svg.getElementById('speed').innerHTML = speedUnits;
+						svg.getElementById('units').innerHTML = speedConverted.unit;
 						
 						var gear = streams.engineInfo[16];
 						if (gear > 0)
@@ -72,15 +77,35 @@ angular.module('beamng.apps')
 						svg.getElementById('brake_x5F_text').innerHTML = brakeVal
 						//svg.getElementById('clutch_x5F_text').innerHTML = 0
 						
+
 						svg.getElementById('fuel_x5F_filler_1_').setAttribute("width",(streams.electrics.fuel*80.368))
-						
 						svg.getElementById('fuel_2_').innerHTML = "Fuel: " + Math.round(streams.electrics.fuel*100) + "%"
-						
+						if (streams.electrics.fuel < 0.05)
+						{
+							svg.getElementById('fuel_2_').style.fill = "rgb(255,0,0)"
+						}
+						else if (streams.electrics.fuel < 0.2)
+						{
+							svg.getElementById('fuel_2_').style.fill = "rgb(255, 165, 0)"
+						}
+						else
+						{
+							svg.getElementById('fuel_2_').style.fill = "rgb(0,0,0)"
+						}
 						if (streams.engineThermalData) {
-							//svg.getElementById('boost_x5F_filler').setAttribute("width",(streams.engineThermalData.forcedInductionInfo.boost*80.368))
-							svg.getElementById('temps_x5F_filler_1_').setAttribute("width",(streams.engineThermalData.coolantTemperature/120*80.368))
 							svg.getElementById('temps_2_').innerHTML = "Temp: " + Math.round(streams.engineThermalData.coolantTemperature) + "C"
-							// = streams.engineThermalData.forcedInductionInfo.boost 
+							if (streams.engineThermalData.coolantTemperature > 120)
+							{
+								svg.getElementById('temps_2_').style.fill = "rgb(255,0,0)"
+								svg.getElementById('temps_x5F_filler_1_').setAttribute("width",(80.368))
+
+							}
+							else{
+								svg.getElementById('temps_x5F_filler_1_').setAttribute("width",(streams.engineThermalData.coolantTemperature/120*80.368))
+								svg.getElementById('temps_2_').style.fill = "rgb(0,0,0)"
+							}
+							
+							
 						  }
 						if (streams.forcedInductionInfo) {
 							//svg.getElementById('boost_x5F_filler').setAttribute("width",Math.round(streams.forcedInductionInfo.boost/100)*80.368)
@@ -105,10 +130,20 @@ angular.module('beamng.apps')
 							  return;
 							}
 						}
+						prevTime = curTime;
+
+						curTime = performance.now();
+						timer -= 0.001 * (curTime - prevTime);
+						var wheelSpeed = streams.electrics.wheelspeed;
+						if (timer < 0) {
+							totalDistance += ((1.0 - timer) * wheelSpeed);
+							svg.getElementById('driven_x5F_distance').innerHTML = Math.round(totalDistance/100)/10 + "km";
+							timer = 1;
+						}
 					});
 					
 				});
-		
+				
 		
 			}
 		  };
