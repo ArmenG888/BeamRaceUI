@@ -192,60 +192,172 @@ angular.module('beamng.apps')
 						}
 						gyMax = Math.max(gyMax, gForces.gy2);
 						gyMin = Math.abs(Math.min(gyMin, gForces.gy2));
-						if (gyMax > 0.5) // front
+						if (gyMax > 0.25) // front
 						{
 							svg.getElementById('front-filler-1g').style.fill = "rgb(255,0,0)";
-						}
+							if(gyMax > 1.5)
+							{
+								svg.getElementById('front-filler-2g').style.fill = "rgb(255,0,0)";
+							}
+							else{
+								svg.getElementById('front-filler-2g').style.fill = "rgb(230,230,230)";
+							}
+							if(gyMax > 3)
+							{
+								svg.getElementById('front-filler-3g').style.fill = "rgb(255,0,0)";
+							}
+							else{
+								svg.getElementById('front-filler-3g').style.fill = "rgb(230,230,230)";
+							}
+						}	
 						else{
 							svg.getElementById('front-filler-1g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-filler-2g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-filler-3g').style.fill = "rgb(230,230,230)";
 						}
-						if (gyMin > 0.5) // rear
+						if (gyMin > 0.25) // rear
 						{
+							if(gyMin > 0.5)
+							{
+								svg.getElementById('rear-filler-2g').style.fill = "rgb(255,0,0)";
+							}
+							else{
+								svg.getElementById('rear-filler-2g').style.fill = "rgb(230,230,230)";
+							}
+							if(gyMin > 1)
+							{
+								svg.getElementById('rear-filler-3g').style.fill = "rgb(255,0,0)";
+							}
+							else{
+								svg.getElementById('rear-filler-3g').style.fill = "rgb(230,230,230)";
+							}
 							svg.getElementById('rear-filler-1g').style.fill = "rgb(255,0,0)";
 						}
 						else{
 							svg.getElementById('rear-filler-1g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-filler-2g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-filler-3g').style.fill = "rgb(230,230,230)";
 						}
-						if (gyMin > gyMax) // rear
+						if (gyMin > gyMax ) // rear
 						{
 							if (gxMin > gxMax && gxMin > 0.5) // left
 							{
 								svg.getElementById('rear-left-filler-1g').style.fill = "rgb(255,0,0)";
+								if (gxMin > 2)
+								{
+									svg.getElementById('rear-left-filler-2g').style.fill = "rgb(255,0,0)";
+								}
+								else
+								{
+									svg.getElementById('rear-left-filler-2g').style.fill = "rgb(230,230,230)";
+								}
+								if (gxMin > 4)
+								{
+									svg.getElementById('rear-left-filler-3g').style.fill = "rgb(255,0,0)";
+								}
+								else
+								{
+									svg.getElementById('rear-left-filler-3g').style.fill = "rgb(230,230,230)";
+								}
 							}
 							else{
 								svg.getElementById('rear-left-filler-1g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('rear-left-filler-2g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('rear-left-filler-3g').style.fill = "rgb(230,230,230)";
 							}
 							if (gxMax > gxMin && gxMax > 0.5) // right
 							{
 								svg.getElementById('rear-right-filler-1g').style.fill = "rgb(255,0,0)";
+								if (gxMax > 2)
+								{
+									svg.getElementById('rear-right-filler-2g').style.fill = "rgb(255,0,0)";
+								}
+								else
+								{
+									svg.getElementById('rear-right-filler-2g').style.fill = "rgb(230,230,230)";
+								}
+								if (gxMax > 4)
+								{
+									svg.getElementById('rear-right-filler-3g').style.fill = "rgb(255,0,0)";
+								}
+								else
+								{
+									svg.getElementById('rear-right-filler-3g').style.fill = "rgb(230,230,230)";
+								}
 							}
 							else{
 								svg.getElementById('rear-right-filler-1g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('rear-right-filler-2g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('rear-right-filler-3g').style.fill = "rgb(230,230,230)";
 							}
 						}
 						else{
 							svg.getElementById('rear-right-filler-1g').style.fill = "rgb(230,230,230)";
 							svg.getElementById('rear-left-filler-1g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-right-filler-2g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-left-filler-2g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-right-filler-3g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-left-filler-3g').style.fill = "rgb(230,230,230)";
 						}
 						if (gyMax > gyMin){
 							if (gxMin > gxMax && gxMin > 0.5) // left
 							{
 								svg.getElementById('front-left-filler-1g').style.fill = "rgb(255,0,0)";
+								if (gxMin > 2)
+								{
+									svg.getElementById('front-left-filler-2g').style.fill = "rgb(255,0,0)";
+								}
+								else
+								{
+									svg.getElementById('front-left-filler-2g').style.fill = "rgb(230,230,230)";
+								}
+								if (gxMin > 4)
+								{
+									svg.getElementById('front-left-filler-3g').style.fill = "rgb(255,0,0)";
+								}
+								else
+								{
+									svg.getElementById('front-left-filler-3g').style.fill = "rgb(230,230,230)";
+								}
 							}
 							else{
 								svg.getElementById('front-left-filler-1g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('front-left-filler-2g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('front-left-filler-3g').style.fill = "rgb(230,230,230)";
 							}
 							if (gxMax > gxMin && gxMax > 0.5) // right
 							{
 								svg.getElementById('front-right-filler-1g').style.fill = "rgb(255,0,0)";
+								if (gxMax > 2)
+								{
+									svg.getElementById('front-right-filler-2g_1_').style.fill = "rgb(255,0,0)";
+								}
+								else
+								{
+									svg.getElementById('front-right-filler-2g_1_').style.fill = "rgb(230,230,230)";
+								}
+								if (gxMax > 4)
+								{
+									svg.getElementById('front-right-filler-3g').style.fill = "rgb(255,0,0)";
+								}
+								else
+								{
+									svg.getElementById('front-right-filler-3g').style.fill = "rgb(230,230,230)";
+								}
 							}
 							else{
 								svg.getElementById('front-right-filler-1g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('front-right-filler-2g_1_').style.fill = "rgb(230,230,230)";
+								svg.getElementById('front-right-filler-3g').style.fill = "rgb(230,230,230)";
 							}
 						}
 						else{
 							svg.getElementById('front-right-filler-1g').style.fill = "rgb(230,230,230)";
 							svg.getElementById('front-left-filler-1g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-right-filler-2g_1_').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-left-filler-2g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-right-filler-3g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-left-filler-3g').style.fill = "rgb(230,230,230)";
 						}
 						if (gyMax > gyMin)
 						{
