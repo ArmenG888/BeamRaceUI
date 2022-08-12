@@ -22,8 +22,9 @@
 	.st16{fill:#2E3192;}
 	.st17{font-size:36px;}
 	.st18{font-size:10px;}
-	.st19{font-size:11px;}
-	.st20{font-size:9px;}
+	.st19{font-size:9px;}
+	.st20{fill:#E6E6E6;stroke:#B3B3B3;stroke-miterlimit:10;}
+	.st21{fill:#E6E6E6;stroke:#999999;stroke-miterlimit:10;}
 </style>
 <path id="backgrond" class="st0" d="M986.54,123.03H13.46C6.03,123.03,0,117,0,109.57V13.46C0,6.03,6.03,0,13.46,0h973.08
 	c7.43,0,13.46,6.03,13.46,13.46v96.11C1000,117,993.97,123.03,986.54,123.03z"/>
@@ -95,11 +96,33 @@
 		c3.57,0,6.46,2.89,6.46,6.46v12.93C689.59,110.7,686.7,113.59,683.13,113.59z"/>
 	<text transform="matrix(1 0 0 1 708.6219 109.3486)" class="st4 st18">Distance Driven</text>
 	<text id="driven_x5F_distance" transform="matrix(1 0 0 1 708.6227 96.8485)" class="st4 st5">100KM</text>
-	<text id="range_x5F_text" transform="matrix(1 0 0 1 636.302 99.3311)" class="st4 st19">100KM</text>
-	<text transform="matrix(1 0 0 1 641.2365 109.3491)" class="st4 st20">Range</text>
-	<text id="current_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 636.302 49.5788)" class="st4 st20">Avg Fuel</text>
-	<text id="average_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 629.3953 36.5523)" class="st4 st18">11L/100km</text>
-	<text id="current_x5F_fuel" transform="matrix(1 0 0 1 629.3954 68.8158)" class="st4 st18">30L/100km</text>
-	<text transform="matrix(1 0 0 1 629.395 81.3159)" class="st4 st20">Current Fuel</text>
+	<text id="range_x5F_text" transform="matrix(1 0 0 1 619.5272 99.331)" class="st4 st18">100KM</text>
+	<text transform="matrix(1 0 0 1 619.5273 109.3491)" class="st4 st19">Range</text>
+	<text id="current_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5276 50.1345)" class="st4 st19">Avg Fuel</text>
+	<text id="average_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5269 36.5523)" class="st4 st18">11L/100km</text>
+	<text id="current_x5F_fuel" transform="matrix(1 0 0 1 619.5268 68.8157)" class="st4 st18">30L/100km</text>
+	<text transform="matrix(1 0 0 1 619.5273 81.3159)" class="st4 st19">Current Fuel</text>
+</g>
+<g id="g-force-rec">
+	<path class="st2" d="M596.03,112.72H338.42c-5.71,0-10.34-4.63-10.34-10.34v-64.4c0-5.71,4.63-10.34,10.34-10.34h257.61
+		c5.71,0,10.34,4.63,10.34,10.34v64.4C606.37,108.09,601.74,112.72,596.03,112.72z"/>
+	<path class="st20" d="M569.27,112.72h-210.2c-11.4,0-20.65-9.24-20.65-20.65V48.28c0-11.4,9.24-20.65,20.65-20.65h210.2
+		c11.4,0,20.65,9.24,20.65,20.65v43.79C589.92,103.47,580.68,112.72,569.27,112.72z"/>
+	<path class="st20" d="M544.86,105.09H386.3c-9.99,0-18.09-8.1-18.09-18.09V53.35c0-9.99,8.1-18.09,18.09-18.09h158.55
+		c9.99,0,18.09,8.1,18.09,18.09V87C562.95,96.99,554.85,105.09,544.86,105.09z"/>
+	<path class="st20" d="M517.27,94.52H417.18c-11.06,0-20.02-8.96-20.02-20.02v-8.46c0-11.06,8.96-20.02,20.02-20.02h100.09
+		c11.06,0,20.02,8.96,20.02,20.02v8.46C537.29,85.56,528.32,94.52,517.27,94.52z"/>
+	<g id="g-force-fillers">
+		<path id="rear-right-filler-1g" class="st20" d="M537.29,70.59l-45.39,0v23.94l25.37,0c11.06,0,20.02-8.96,20.02-20.02V70.59z"/>
+		<rect id="front-filler-1g" x="442.98" y="46.34" class="st20" width="49.34" height="22.69"/>
+		<rect id="rear-filler-1g" x="442.55" y="71.3" class="st20" width="49.34" height="23.56"/>
+		<path id="front-right-filler-1g" class="st20" d="M537.29,70.27h-45.39V46.34h25.37c11.06,0,20.02,8.96,20.02,20.02V70.27z"/>
+		<path id="rear-left-filler-1g" class="st20" d="M397.16,70.92l45.39,0l0,23.94l-25.37,0c-11.06,0-20.02-8.96-20.02-20.02V70.92z"
+			/>
+		<path id="front-left-filler-1g" class="st20" d="M397.16,70.27h45.39V46.34h-25.37c-11.06,0-20.02,8.96-20.02,20.02V70.27z"/>
+	</g>
+	<path class="st21" d="M479.32,86.14h-24.19c-6.94,0-12.57-5.63-12.57-12.57v-6.59c0-6.94,5.63-12.57,12.57-12.57h24.19
+		c6.94,0,12.57,5.63,12.57,12.57v6.59C491.89,80.51,486.26,86.14,479.32,86.14z"/>
+	<text id="g-text" transform="matrix(1 0 0 1 458.3423 73.291)" class="st4 st18">5.1G</text>
 </g>
 </svg>

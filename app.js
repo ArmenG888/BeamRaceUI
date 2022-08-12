@@ -19,6 +19,13 @@ angular.module('beamng.apps')
 									fuelConsumptionRate = 0;
 									avgFuelConsumptionRate = 0;
 									previousFuel = 0;
+									frameCounter = 0;
+									gxMin = 0;
+									gxMax = 0;
+									gyMin = 0;
+									gyMax = 0;
+									gx = 0;
+									gy = 0;
 				element.on('load', function () {
 					let svg = element[0].contentDocument
 					let values = []
@@ -159,11 +166,108 @@ angular.module('beamng.apps')
 							svg.getElementById('range_x5F_text').innerHTML = range
 							svg.getElementById('current_x5F_fuel').innerHTML = Math.round(fuelConsumptionRate*100000) + "L/100km"
 						}
+						var gForces = {};
+
+						for (var key in streams.sensors) {
+							gForces[key] = streams.sensors[key] / 9.81;
+							
+						}
+						
+						gxMin = 0;
+						gxMax = 0;
+						gyMin = 0;
+						gyMax = 0;
+						gx = 0;
+						gy = 0;
+						gxMax = Math.max(gxMax, gForces.gx2);
+						gxMin = Math.abs(Math.min(gxMin, gForces.gx2));
+						
+						if (gxMax > gxMin)
+						{
+							gx = gxMax;
+							
+						}
+						else{
+							gx = gxMin;
+						}
+						gyMax = Math.max(gyMax, gForces.gy2);
+						gyMin = Math.abs(Math.min(gyMin, gForces.gy2));
+						if (gyMax > 0.5) // front
+						{
+							svg.getElementById('front-filler-1g').style.fill = "rgb(255,0,0)";
+						}
+						else{
+							svg.getElementById('front-filler-1g').style.fill = "rgb(230,230,230)";
+						}
+						if (gyMin > 0.5) // rear
+						{
+							svg.getElementById('rear-filler-1g').style.fill = "rgb(255,0,0)";
+						}
+						else{
+							svg.getElementById('rear-filler-1g').style.fill = "rgb(230,230,230)";
+						}
+						if (gyMin > gyMax) // rear
+						{
+							if (gxMin > gxMax && gxMin > 0.5) // left
+							{
+								svg.getElementById('rear-left-filler-1g').style.fill = "rgb(255,0,0)";
+							}
+							else{
+								svg.getElementById('rear-left-filler-1g').style.fill = "rgb(230,230,230)";
+							}
+							if (gxMax > gxMin && gxMax > 0.5) // right
+							{
+								svg.getElementById('rear-right-filler-1g').style.fill = "rgb(255,0,0)";
+							}
+							else{
+								svg.getElementById('rear-right-filler-1g').style.fill = "rgb(230,230,230)";
+							}
+						}
+						else{
+							svg.getElementById('rear-right-filler-1g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-left-filler-1g').style.fill = "rgb(230,230,230)";
+						}
+						if (gyMax > gyMin){
+							if (gxMin > gxMax && gxMin > 0.5) // left
+							{
+								svg.getElementById('front-left-filler-1g').style.fill = "rgb(255,0,0)";
+							}
+							else{
+								svg.getElementById('front-left-filler-1g').style.fill = "rgb(230,230,230)";
+							}
+							if (gxMax > gxMin && gxMax > 0.5) // right
+							{
+								svg.getElementById('front-right-filler-1g').style.fill = "rgb(255,0,0)";
+							}
+							else{
+								svg.getElementById('front-right-filler-1g').style.fill = "rgb(230,230,230)";
+							}
+						}
+						else{
+							svg.getElementById('front-right-filler-1g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-left-filler-1g').style.fill = "rgb(230,230,230)";
+						}
+						if (gyMax > gyMin)
+						{
+							gy = gyMax;
+						}
+						else{
+							gy = gyMin;
+							
+						}
+						if (gy > gx)
+						{
+							svg.getElementById('g-text').innerHTML = Math.round(gy*10)/10 + 'G';
+						}
+						else{
+							svg.getElementById('g-text').innerHTML = Math.round(gx*10)/10 + 'G';
+						}
+						
+						//console.log(gxMax+','+gyMax+','+gyMin);
+						
+						
 					});
-					
 				});
-				
-		
 			}
 		  };
 		}]);
