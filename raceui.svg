@@ -99,7 +99,7 @@
 	<text transform="matrix(1 0 0 1 641.2365 109.3491)" class="st4 st20">Range</text>
 	<text id="current_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 636.302 49.5788)" class="st4 st20">Avg Fuel</text>
 	<text id="average_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 629.3953 36.5523)" class="st4 st18">11L/100km</text>
-	<text transform="matrix(1 0 0 1 629.3954 68.8158)" class="st4 st18">30L/100km</text>
+	<text id="current_x5F_fuel" transform="matrix(1 0 0 1 629.3954 68.8158)" class="st4 st18">30L/100km</text>
 	<text transform="matrix(1 0 0 1 629.395 81.3159)" class="st4 st20">Current Fuel</text>
 </g>
 </svg>

@@ -15,6 +15,10 @@ angular.module('beamng.apps')
 									timer=1;
 									prevTime = performance.now();
 									curTime = prevTime;
+									count = 0;
+									fuelConsumptionRate = 0;
+									avgFuelConsumptionRate = 0;
+									previousFuel = 0;
 				element.on('load', function () {
 					let svg = element[0].contentDocument
 					let values = []
@@ -138,7 +142,22 @@ angular.module('beamng.apps')
 						if (timer < 0) {
 							totalDistance += ((1.0 - timer) * wheelSpeed);
 							svg.getElementById('driven_x5F_distance').innerHTML = Math.round(totalDistance/100)/10 + "km";
+							count++;
+	
+				
+							if (previousFuel > streams.engineInfo[11] && (previousFuel - streams.engineInfo[11]) > 0.0002) {
+								fuelConsumptionRate = (previousFuel - streams.engineInfo[11]) / ((1 - timer) * streams.electrics.wheelspeed); // l/(s*(m/s)) = l/m
+							} else {
+								fuelConsumptionRate = 0;
+							}
+				
+							previousFuel = streams.engineInfo[11];
+							range = fuelConsumptionRate > 0 ? UiUnits.buildString('distance', streams.engineInfo[11] / fuelConsumptionRate, 2) : (streams.electrics.wheelspeed > 0.1 ? 'Infinity' : UiUnits.buildString('distance', 0));
+							avgFuelConsumptionRate += (fuelConsumptionRate - avgFuelConsumptionRate) / count;
 							timer = 1;
+							svg.getElementById('average_x5F_fuel_x5F_text').innerHTML = Math.round(avgFuelConsumptionRate*100000) + "L/100km"
+							svg.getElementById('range_x5F_text').innerHTML = range
+							svg.getElementById('current_x5F_fuel').innerHTML = Math.round(fuelConsumptionRate*100000) + "L/100km"
 						}
 					});
 					
