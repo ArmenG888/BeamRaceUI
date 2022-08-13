@@ -80,7 +80,7 @@
 	<text id="last_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0658 68.2762)" class="st4 st7">Last: NA</text>
 	<text id="current" transform="matrix(1 0 0 1 191.0658 51.733)" class="st4 st17">0:00:00</text>
 	<text id="lap" transform="matrix(1 0 0 1 191.0661 109.3485)" class="st4 st5">Lap: NA</text>
-	<text transform="matrix(1 0 0 1 191.0656 96.8487)" class="st4 st5">Check Point: NA </text>
+	<text id="check_x5F_point" transform="matrix(1 0 0 1 191.0656 96.8487)" class="st4 st5">Check Point: NA </text>
 </g>
 <path id="time_x5F_rec" class="st2" d="M989.34,119.08h-69.88c-3.57,0-6.46-2.89-6.46-6.46v-9.3c0-3.57,2.89-6.46,6.46-6.46h69.88
 	c3.57,0,6.46,2.89,6.46,6.46v9.3C995.8,116.18,992.91,119.08,989.34,119.08z"/>

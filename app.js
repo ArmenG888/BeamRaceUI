@@ -8,9 +8,7 @@ angular.module('beamng.apps')
 			link: function (scope, element, attrs) {
 				
 				StreamsManager.add(['engineInfo','electrics','engineThermalData']);
-				
-				scope.laps = 0
-				new_lap = false;
+				scope.scenarioInfo = {lap:'',wp:''};
 				var totalDistance = parseFloat(sessionStorage.getItem('apps:simpleTrip.totalDistance')) || 0;
 									timer=1;
 									prevTime = performance.now();
@@ -71,7 +69,7 @@ angular.module('beamng.apps')
 						
 						var gear = streams.engineInfo[16];
 						if (gear > 0)
-							var gearText = gear;
+							var gearText = ' ' + gear;
 						else if (gear < 0)
 							var gearText = 'R';
 						else
@@ -374,11 +372,30 @@ angular.module('beamng.apps')
 						else{
 							svg.getElementById('g-text').innerHTML = Math.round(gx*10)/10 + 'G';
 						}
+
 						
 						//console.log(gxMax+','+gyMax+','+gyMin);
 						
 						
 					});
+					scope.$on('RaceLapChange', function (event, data) {
+						if(data === null) return;
+						scope.$applyAsync(function () {
+						  console.log(data.current)
+						  svg.getElementById('lap').innerHTML = "Lap " + data.current  + " / " + data.count;
+						  scope.scenarioInfo.lap = "Lap " + data.current  + " / " + data.count;
+
+						});
+					});
+			
+					 scope.$on('WayPoint', function (event, data) {
+						if(data === null) return;
+						scope.$applyAsync(function () {
+						  svg.getElementById('check_x5F_point').innerHTML = data;
+						  console.log(data)
+						  scope.scenarioInfo.wp = data;
+						});
+					  });
 				});
 			}
 		  };
