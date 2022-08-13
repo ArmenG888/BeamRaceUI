@@ -9,7 +9,9 @@ angular.module('beamng.apps')
 				
 				StreamsManager.add(['engineInfo','electrics','engineThermalData']);
 				scope.scenarioInfo = {lap:'',wp:''};
+				scope.raceTime = null;
 				var totalDistance = parseFloat(sessionStorage.getItem('apps:simpleTrip.totalDistance')) || 0;
+									new_lap=false;
 									timer=1;
 									prevTime = performance.now();
 									curTime = prevTime;
@@ -27,7 +29,7 @@ angular.module('beamng.apps')
 				element.on('load', function () {
 					let svg = element[0].contentDocument
 					let values = []
-					
+					svg.getElementById('lap_x5F_times').style.display = "none";
 					scope.$on('streamsUpdate', function (event, streams, data) {
 						brakes = [];
 						for (i in streams.wheelThermalData.wheels) {
@@ -378,6 +380,10 @@ angular.module('beamng.apps')
 						
 						
 					});
+
+					scope.$on('raceTime', function (event, data) {
+						svg.getElementById('lap_x5F_times').style.display = "block";
+					  });
 					scope.$on('RaceLapChange', function (event, data) {
 						if(data === null) return;
 						scope.$applyAsync(function () {
@@ -388,7 +394,7 @@ angular.module('beamng.apps')
 						});
 					});
 			
-					 scope.$on('WayPoint', function (event, data) {
+					 scope.$on('WayPoint', function (event, data) {	
 						if(data === null) return;
 						scope.$applyAsync(function () {
 						  svg.getElementById('check_x5F_point').innerHTML = data;
