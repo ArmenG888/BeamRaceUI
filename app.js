@@ -8,8 +8,9 @@ angular.module('beamng.apps')
 			link: function (scope, element, attrs) {
 				
 				StreamsManager.add(['engineInfo','electrics','engineThermalData']);
-				scope.scenarioInfo = {lap:'',wp:''};
 				scope.raceTime = null;
+				var offset = 0;
+				var newLap = false;
 				var totalDistance = parseFloat(sessionStorage.getItem('apps:simpleTrip.totalDistance')) || 0;
 									new_lap=false;
 									timer=1;
@@ -26,6 +27,8 @@ angular.module('beamng.apps')
 									gyMax = 0;
 									gx = 0;
 									gy = 0;
+									lap_time = 0;
+									best_lap = -1;
 				element.on('load', function () {
 					let svg = element[0].contentDocument
 					let values = []
@@ -380,26 +383,55 @@ angular.module('beamng.apps')
 						
 						
 					});
-
-					scope.$on('raceTime', function (event, data) {
-						svg.getElementById('lap_x5F_times').style.display = "block";
+					
+			  
+					function resetValues () {
+					  offset = 0;
+					  newLap = false;
+					  scope.$evalAsync(function () {
+						scope.raceTime = null;
 					  });
-					scope.$on('RaceLapChange', function (event, data) {
-						if(data === null) return;
-						scope.$applyAsync(function () {
-						  console.log(data.current)
-						  svg.getElementById('lap').innerHTML = "Lap " + data.current  + " / " + data.count;
-						  scope.scenarioInfo.lap = "Lap " + data.current  + " / " + data.count;
-
-						});
+					}
+			  
+					scope.$on('raceTime', function (event, data) {
+					  svg.getElementById('lap_x5F_times').style.display = "block";
+					  if (newLap) {
+						offset = data.reverseTime ? 0 : data.time;
+						newLap = false;
+						 
+					  }
+					  scope.$evalAsync(function () {
+						  lap_time = (data.time - offset) * 1000
+						  svg.getElementById('current').innerHTML = new Date(lap_time).toISOString().slice(14, 22);
+						  
+					  });
 					});
-			
+					// scope.$on('RaceTimeComparison', function (event, data) {
+					// 	scope.$applyAsync(function () {
+					// 	  scope.time = data.time;
+					// 	  scope.bgColor = (data.time > 0 ? 'rgba(212,0,0,0.71)' : 'rgba(60,204,0,0.71)');
+					// 	});
+					//   });
+					scope.$on('ScenarioResetTimer', resetValues);
+			  
+					scope.$on('RaceLapChange', function (event, data) {
+					  svg.getElementById('last_x5F_lap_x5F_time').innerHTML = "Last: " + String(new Date(lap_time).toISOString().slice(14, 22));
+					  if (best_lap == -1)
+					  {
+						console.log("new pb");
+						svg.getElementById('best_x5F_lap_x5F_time').innerHTML = "Best: " + String(new Date(lap_time).toISOString().slice(14, 22));
+						best_lap = lap_time;
+					  }
+					  svg.getElementById('lap').innerHTML = "Lap " + data.current  + " / " + data.count;
+					  if (data && data.current > 1) {
+						newLap = true;
+						
+					  }
+					});	
 					 scope.$on('WayPoint', function (event, data) {	
 						if(data === null) return;
 						scope.$applyAsync(function () {
 						  svg.getElementById('check_x5F_point').innerHTML = data;
-						  console.log(data)
-						  scope.scenarioInfo.wp = data;
 						});
 					  });
 				});
