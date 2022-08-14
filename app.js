@@ -33,7 +33,7 @@ angular.module('beamng.apps')
 					let svg = element[0].contentDocument
 					let values = []
 					svg.getElementById('lap_x5F_times').style.display = "none";
-					svg.getElementById('gear').style.font_style = "italic";
+					
 					scope.$on('streamsUpdate', function (event, streams, data) {
 						brakes = [];
 						for (i in streams.wheelThermalData.wheels) {
@@ -437,12 +437,13 @@ angular.module('beamng.apps')
 					  });
 					scope.$on('RaceTimeComparison', function (event, data) {
 						scope.$applyAsync(function () {
-						  svg.getElementById("delta").innerHTML = 'Delta: ' + Math.round(data.time*10)/10;
 						  if (data.time > 0)
 						  {
+							svg.getElementById("delta").innerHTML = 'Delta: +' + Math.round(data.time*100)/100;
 							svg.getElementById("delta").style.fill = "rgb(100,0,0)"
 						  }
 						  else{
+							svg.getElementById("delta").innerHTML = 'Delta: ' + Math.round(data.time*100)/100;
 							svg.getElementById("delta").style.fill = "rgb(0,100,0)"
 						  }
 						});
