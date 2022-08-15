@@ -1,139 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="app" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1000 123.03" style="enable-background:new 0 0 1000 123.03;" xml:space="preserve">
+	 viewBox="0 0 1000 123" style="enable-background:new 0 0 1000 123;" xml:space="preserve">
 <style type="text/css">
-	.st0{opacity:0.79;fill:#FFFFFF;}
+	.st0{opacity:0.79;fill:#FFFFFF;enable-background:new    ;}
 	.st1{fill:#B3B3B3;}
 	.st2{fill:#E6E6E6;}
 	.st3{fill:#0071BC;}
 	.st4{font-family:'Consolas';}
-	.st5{font-size:12px;}
+	.st5{font-size:11px;}
 	.st6{fill:#808080;}
-	.st7{font-size:14px;}
-	.st8{font-size:24px;}
-	.st9{font-size:120px;}
-	.st10{fill:#ED1C24;}
-	.st11{fill:#29ABE2;}
-	.st12{fill:#FF0000;}
-	.st13{fill:#00FF00;}
-	.st14{fill:#CCCCCC;}
-	.st15{fill:#F7931E;}
-	.st16{fill:#2E3192;}
-	.st17{font-size:30px;}
-	.st18{font-size:11px;}
+	.st7{font-size:12px;}
+	.st8{font-size:14px;}
+	.st9{font-size:24px;}
+	.st10{font-size:120px;}
+	.st11{fill:#ED1C24;}
+	.st12{fill:#29ABE2;}
+	.st13{fill:#FF0000;}
+	.st14{fill:#00FF00;}
+	.st15{fill:#CCCCCC;}
+	.st16{fill:#F7931E;}
+	.st17{fill:#2E3192;}
+	.st18{font-size:28px;}
 	.st19{font-size:10px;}
 	.st20{font-size:9px;}
 	.st21{fill:#E6E6E6;stroke:#B3B3B3;stroke-miterlimit:10;}
 	.st22{fill:#E6E6E6;stroke:#999999;stroke-miterlimit:10;}
 </style>
-<path id="backgrond" class="st0" d="M986.54,123.03H13.46C6.03,123.03,0,117,0,109.57V13.46C0,6.03,6.03,0,13.46,0h973.08
-	c7.43,0,13.46,6.03,13.46,13.46v96.11C1000,117,993.97,123.03,986.54,123.03z"/>
-<rect id="rpm" x="191.07" y="9.45" class="st1" width="680.59" height="11.84"/>
+<path id="backgrond" class="st0" d="M986.5,123H13.5C6,123,0,117,0,109.6V13.5C0,6,6,0,13.5,0h973.1c7.4,0,13.5,6,13.5,13.5v96.1
+	C1000,117,994,123,986.5,123z"/>
+<rect id="rpm" x="191.1" y="9.4" class="st1" width="680.6" height="11.8"/>
 <g id="brake_x5F_temps">
-	<path id="brake_x5F_temps_x5F_rec" class="st2" d="M770.58,78.09h-59.05c-4.4,0-7.98-3.57-7.98-7.98V35.39
-		c0-4.4,3.57-7.98,7.98-7.98h59.05c4.4,0,7.98,3.57,7.98,7.98v34.72C778.55,74.51,774.98,78.09,770.58,78.09z"/>
+	<path id="brake_x5F_temps_x5F_rec" class="st2" d="M770.6,78.1h-59c-4.4,0-8-3.6-8-8V35.4c0-4.4,3.6-8,8-8h59c4.4,0,8,3.6,8,8v34.7
+		C778.5,74.5,775,78.1,770.6,78.1z"/>
 	<text id="brake1" transform="matrix(1 0 0 1 708.622 44.4975)" class="st3 st4 st5">32C</text>
-	<text id="brake3" transform="matrix(1 0 0 1 748.5831 69.1183)" class="st3 st4 st5">32C</text>
+	<text id="brake3" transform="matrix(1 0 0 1 741.0546 69.7853)" class="st3 st4 st5">32C</text>
 	<text id="brake2" transform="matrix(1 0 0 1 708.6223 69.1184)" class="st3 st4 st5">32C</text>
-	<text id="brake0" transform="matrix(1 0 0 1 748.583 44.4974)" class="st3 st4 st5">32C</text>
+	<text id="brake0" transform="matrix(1 0 0 1 741.0551 44.4973)" class="st3 st4 st5">32C</text>
 </g>
-<rect id="filler" x="191.07" y="9.45" class="st6" width="286.18" height="11.84"/>
-<text id="max_x5F_rpm" transform="matrix(1 0 0 1 876.2633 18)" class="st4 st5">8k</text>
-<text id="units" transform="matrix(1 0 0 1 84.4457 68.2763)" class="st4 st7">km/h</text>
-<text id="speed" transform="matrix(1 0 0 1 84.4456 49.5788)" class="st4 st8">0</text>
-<text id="gear" transform="matrix(1 0 0 1 10.474 84.4477)" class="st4 st9">N</text>
-<text id="rpm_x5F_text" transform="matrix(1 0 0 1 84.4457 21.2893)" class="st4 st7">0 RPM</text>
-<rect id="top_x5F_rpm" x="848.63" y="9.45" class="st10" width="23.03" height="11.84"/>
+<rect id="filler" x="191.1" y="9.4" class="st6" width="286.2" height="11.8"/>
+<text id="max_x5F_rpm" transform="matrix(1 0 0 1 876.2633 18)" class="st4 st7">8k</text>
+<text id="units" transform="matrix(1 0 0 1 84.4457 68.2763)" class="st4 st8">km/h</text>
+<text id="speed" transform="matrix(1 0 0 1 84.4456 49.5788)" class="st4 st9">0</text>
+<text id="gear" transform="matrix(1 0 0 1 10.474 84.4477)" class="st4 st10">N</text>
+<text id="rpm_x5F_text" transform="matrix(1 0 0 1 84.4457 21.2893)" class="st4 st8">0 RPM</text>
+<rect id="top_x5F_rpm" x="848.6" y="9.4" class="st11" width="23" height="11.8"/>
 <g id="pedals">
-	<path id="pedals_x5F_rec" class="st2" d="M987.83,87.74h-66.85c-4.4,0-7.98-3.57-7.98-7.98V12.91c0-4.4,3.57-7.98,7.98-7.98h66.85
-		c4.4,0,7.98,3.57,7.98,7.98v66.85C995.8,84.17,992.23,87.74,987.83,87.74z"/>
-	<rect id="clutch" x="921.38" y="8.08" class="st1" width="14.47" height="63.22"/>
-	<rect id="gas" x="970.76" y="8.08" class="st1" width="14.47" height="63.22"/>
-	<rect id="brake" x="946.28" y="8.08" class="st1" width="14.47" height="63.22"/>
-	
-		<rect id="clutch_x5F_filler_1_" x="921.38" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1857.2371 79.3748)" class="st11" width="14.47" height="63.22"/>
-	
-		<rect id="brake_x5F_filler" x="946.74" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1907.9474 79.3747)" class="st12" width="14.47" height="63.22"/>
-	
-		<rect id="gas_x5F_filler" x="970.76" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1955.991 79.3748)" class="st13" width="14.47" height="63.22"/>
-	<text id="clutch_x5F_text" transform="matrix(1 0 0 1 916.6714 82.8876)" class="st4 st7">100</text>
-	<text id="brake_x5F_text" transform="matrix(1 0 0 1 942.6429 82.8875)" class="st4 st7">100</text>
-	<text id="gas_x5F_text" transform="matrix(1 0 0 1 967.999 82.8876)" class="st4 st7">100</text>
+	<path id="pedals_x5F_rec" class="st2" d="M987.8,87.7H921c-4.4,0-8-3.6-8-8V12.9c0-4.4,3.6-8,8-8h66.8c4.4,0,8,3.6,8,8v66.8
+		C995.8,84.2,992.2,87.7,987.8,87.7z"/>
+	<rect id="clutch" x="921.4" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="gas" x="970.8" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="brake" x="946.3" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="clutch_x5F_filler_1_" x="921.4" y="8.1" class="st12" width="14.5" height="63.2"/>
+	<rect id="brake_x5F_filler" x="946.7" y="8.1" class="st13" width="14.5" height="63.2"/>
+	<rect id="gas_x5F_filler" x="970.8" y="8.1" class="st14" width="14.5" height="63.2"/>
+	<text id="clutch_x5F_text" transform="matrix(1 0 0 1 916.6714 82.8876)" class="st4 st8">100</text>
+	<text id="brake_x5F_text" transform="matrix(1 0 0 1 942.6429 82.8875)" class="st4 st8">100</text>
+	<text id="gas_x5F_text" transform="matrix(1 0 0 1 967.999 82.8876)" class="st4 st8">100</text>
 </g>
 <g id="engine_x5F_info">
-	<path id="engine_x5F_info_x5F_rec" class="st2" d="M869.86,115.18h-77.17c-4.4,0-7.98-3.57-7.98-7.98V35.39
-		c0-4.4,3.57-7.98,7.98-7.98h77.17c4.4,0,7.98,3.57,7.98,7.98v71.81C877.84,111.61,874.26,115.18,869.86,115.18z"/>
-	<rect id="temps_x5F_rec_1_" x="791.29" y="68.82" class="st14" width="80.37" height="12.5"/>
-	<rect id="boost_x5F_rec_1_" x="791.29" y="96.85" class="st14" width="80.37" height="12.5"/>
-	<rect id="fuel_x5F_rec_1_" x="791.29" y="43.88" class="st14" width="80.37" height="12.5"/>
-	<rect id="boost_x5F_filler_1_" x="791.29" y="96.85" class="st15" width="80.37" height="12.5"/>
-	<rect id="temps_x5F_filler_1_" x="791.29" y="68.82" class="st12" width="80.37" height="12.5"/>
-	<rect id="fuel_x5F_filler_1_" x="791.29" y="43.88" class="st16" width="80.37" height="12.5"/>
+	<path id="engine_x5F_info_x5F_rec" class="st2" d="M869.9,115.2h-77.2c-4.4,0-8-3.6-8-8V35.4c0-4.4,3.6-8,8-8h77.2c4.4,0,8,3.6,8,8
+		v71.8C877.8,111.6,874.3,115.2,869.9,115.2z"/>
+	<rect id="temps_x5F_rec_1_" x="791.3" y="68.8" class="st15" width="80.4" height="12.5"/>
+	<rect id="boost_x5F_rec_1_" x="791.3" y="96.8" class="st15" width="80.4" height="12.5"/>
+	<rect id="fuel_x5F_rec_1_" x="791.3" y="43.9" class="st15" width="80.4" height="12.5"/>
+	<rect id="boost_x5F_filler_1_" x="791.3" y="96.8" class="st16" width="80.4" height="12.5"/>
+	<rect id="temps_x5F_filler_1_" x="791.3" y="68.8" class="st13" width="80.4" height="12.5"/>
+	<rect id="fuel_x5F_filler_1_" x="791.3" y="43.9" class="st17" width="80.4" height="12.5"/>
 	<text id="fuel_2_" transform="matrix(1 0 0 1 791.2897 39.6079)" class="st4 st5">Fuel: NA</text>
 	<text id="temps_2_" transform="matrix(1 0 0 1 791.2897 66.0986)" class="st4 st5">Temp: NA</text>
 	<text id="boost_2_" transform="matrix(1 0 0 1 791.2899 92.3883)" class="st4 st5">Boost: NA</text>
-	<path id="engine_x5F_info_x5F_rec_1_" class="st2" d="M312.73,115.18H196.45c-4.4,0-7.98-3.57-7.98-7.98V32.37
-		c0-4.4,3.57-7.98,7.98-7.98h116.29c4.4,0,7.98,3.57,7.98,7.98v74.83C320.71,111.61,317.14,115.18,312.73,115.18z"/>
+	<path id="engine_x5F_info_x5F_rec_1_" class="st2" d="M312.7,115.2H196.4c-4.4,0-8-3.6-8-8V32.4c0-4.4,3.6-8,8-8h116.3
+		c4.4,0,8,3.6,8,8v74.8C320.7,111.6,317.1,115.2,312.7,115.2z"/>
 </g>
 <g id="lap_x5F_times">
-	<text id="best_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0662 70.271)" class="st4 st5">Best: NA</text>
-	<text id="last_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0663 57.6821)" class="st4 st5">Last: NA</text>
-	<text id="current" transform="matrix(1 0 0 1 191.0659 46.3356)" class="st4 st17">0:00:00</text>
-	<text id="lap" transform="matrix(1 0 0 1 191.0666 108.0383)" class="st4 st5">Lap: NA</text>
-	<text id="check_x5F_point" transform="matrix(1 0 0 1 191.0659 95.449)" class="st4 st5">Check Point: NA </text>
-	<text id="delta" transform="matrix(1 0 0 1 191.0664 82.8601)" class="st4 st5">Delta: NA</text>
+	<text id="best_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0662 70.271)" class="st4 st7">Best: NA</text>
+	<text id="last_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0663 57.6821)" class="st4 st7">Last: NA</text>
+	<text id="current" transform="matrix(1 0 0 1 191.0659 46.3356)" class="st4 st18">00:00:00</text>
+	<text id="lap" transform="matrix(1 0 0 1 191.0666 108.0383)" class="st4 st7">Lap: NA</text>
+	<text id="check_x5F_point" transform="matrix(1 0 0 1 191.0659 95.449)" class="st4 st7">Check Point: NA </text>
+	<text id="delta" transform="matrix(1 0 0 1 191.0664 82.8601)" class="st4 st7">Delta: NA</text>
 </g>
-<path id="time_x5F_rec" class="st2" d="M989.34,119.08h-69.88c-3.57,0-6.46-2.89-6.46-6.46v-9.3c0-3.57,2.89-6.46,6.46-6.46h69.88
-	c3.57,0,6.46,2.89,6.46,6.46v9.3C995.8,116.18,992.91,119.08,989.34,119.08z"/>
-<text id="time" transform="matrix(1 0 0 1 916.6711 112.4999)" class="st4 st18">Clock: 12:48</text>
+<path id="time_x5F_rec" class="st2" d="M989.3,119.1h-69.9c-3.6,0-6.5-2.9-6.5-6.5v-9.3c0-3.6,2.9-6.5,6.5-6.5h69.9
+	c3.6,0,6.5,2.9,6.5,6.5v9.3C995.8,116.2,992.9,119.1,989.3,119.1z"/>
+<text id="time" transform="matrix(1 0 0 1 916.6711 112.4999)" class="st4 st5">Clock: 12:48</text>
 <g id="fuel_x5F_range">
-	<path id="distance_x5F_driven" class="st2" d="M772.09,114.21h-62.07c-3.57,0-6.46-2.89-6.46-6.46V90.91
-		c0-3.57,2.89-6.46,6.46-6.46h62.07c3.57,0,6.46,2.89,6.46,6.46v16.84C778.55,111.32,775.66,114.21,772.09,114.21z"/>
-	<path id="current_x5F_fuelrec_1_" class="st2" d="M683.13,83.1h-62.07c-3.57,0-6.46-2.89-6.46-6.46V63.71
-		c0-3.57,2.89-6.46,6.46-6.46h62.07c3.57,0,6.46,2.89,6.46,6.46v12.93C689.59,80.21,686.7,83.1,683.13,83.1z"/>
-	<path id="average_x5F_fuel_x5F_rec" class="st2" d="M683.13,52.61h-62.07c-3.57,0-6.46-2.89-6.46-6.46V33.22
-		c0-3.57,2.89-6.46,6.46-6.46h62.07c3.57,0,6.46,2.89,6.46,6.46v12.93C689.59,49.72,686.7,52.61,683.13,52.61z"/>
-	<path id="range_x5F_rec" class="st2" d="M683.13,113.59h-62.07c-3.57,0-6.46-2.89-6.46-6.46V94.2c0-3.57,2.89-6.46,6.46-6.46h62.07
-		c3.57,0,6.46,2.89,6.46,6.46v12.93C689.59,110.7,686.7,113.59,683.13,113.59z"/>
+	<path id="distance_x5F_driven" class="st2" d="M772.1,114.2H710c-3.6,0-6.5-2.9-6.5-6.5V90.9c0-3.6,2.9-6.5,6.5-6.5h62.1
+		c3.6,0,6.5,2.9,6.5,6.5v16.8C778.5,111.3,775.7,114.2,772.1,114.2z"/>
+	<path id="current_x5F_fuelrec_1_" class="st2" d="M683.1,83.1h-62.1c-3.6,0-6.5-2.9-6.5-6.5V63.7c0-3.6,2.9-6.5,6.5-6.5h62.1
+		c3.6,0,6.5,2.9,6.5,6.5v12.9C689.6,80.2,686.7,83.1,683.1,83.1z"/>
+	<path id="average_x5F_fuel_x5F_rec" class="st2" d="M683.1,52.6h-62.1c-3.6,0-6.5-2.9-6.5-6.5V33.2c0-3.6,2.9-6.5,6.5-6.5h62.1
+		c3.6,0,6.5,2.9,6.5,6.5v12.9C689.6,49.7,686.7,52.6,683.1,52.6z"/>
+	<path id="range_x5F_rec" class="st2" d="M683.1,113.6h-62.1c-3.6,0-6.5-2.9-6.5-6.5V94.2c0-3.6,2.9-6.5,6.5-6.5h62.1
+		c3.6,0,6.5,2.9,6.5,6.5v12.9C689.6,110.7,686.7,113.6,683.1,113.6z"/>
 	<text transform="matrix(1 0 0 1 708.6223 109.3483)" class="st4 st19">Dist Driven</text>
-	<text id="driven_x5F_distance" transform="matrix(1 0 0 1 708.6227 96.8485)" class="st4 st5">100KM</text>
+	<text id="driven_x5F_distance" transform="matrix(1 0 0 1 708.6227 96.8485)" class="st4 st7">100KM</text>
 	<text id="range_x5F_text" transform="matrix(1 0 0 1 619.5272 99.331)" class="st4 st19">100KM</text>
 	<text transform="matrix(1 0 0 1 619.5273 109.3491)" class="st4 st20">Range</text>
 	<text id="current_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5276 50.1345)" class="st4 st20">Avg Fuel</text>
-	<text id="average_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5269 36.5523)" class="st4 st19">11L/100km</text>
-	<text id="current_x5F_fuel" transform="matrix(1 0 0 1 619.5268 68.8157)" class="st4 st19">30L/100km</text>
+	<text id="average_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5269 36.5523)" class="st4 st20">11L/100km</text>
+	<text id="current_x5F_fuel" transform="matrix(1 0 0 1 619.5268 68.8157)" class="st4 st20">30L/100km</text>
 	<text transform="matrix(1 0 0 1 619.5273 81.3159)" class="st4 st20">Current Fuel</text>
 </g>
 <g id="g-force-rec">
 	<g id="g-force-fillers">
 	</g>
-	<path class="st21" d="M575.35,114.21H359.07c-11.4,0-20.65-9.24-20.65-20.65V48.28c0-11.4,9.24-20.65,20.65-20.65h216.28
-		c11.4,0,20.65,9.24,20.65,20.65v45.28C595.99,104.97,586.75,114.21,575.35,114.21z"/>
-	<rect id="rear-filler-3g" x="442.34" y="103.1" class="st2" width="49.77" height="10.21"/>
-	<rect id="front-filler-3g" x="442.09" y="27.63" class="st2" width="49.77" height="7.78"/>
-	<path id="rear-left-filler-3g" class="st2" d="M338.42,71.03l103.67,0v42.71l-83.02,0c-11.4,0-20.65-9.24-20.65-20.65V71.03z"/>
-	<path id="rear-right-filler-3g" class="st2" d="M595.99,71.03l-103.67,0l0,42.71l83.02,0c11.4,0,20.65-9.24,20.65-20.65
-		L595.99,71.03z"/>
-	<path id="front-right-filler-3g" class="st2" d="M595.99,70.34H492.32V27.63h83.02c11.4,0,20.65,9.24,20.65,20.65V70.34z"/>
-	<path id="front-left-filler-3g" class="st2" d="M338.42,70.34h103.67V27.63h-83.02c-11.4,0-20.65,9.24-20.65,20.65V70.34z"/>
-	<path id="front-right-filler-2g_1_" class="st2" d="M547.65,35.49h-55.76v34.79h73.85V53.58
-		C565.74,43.59,557.64,35.49,547.65,35.49z"/>
-	<rect id="rear-filler-2g" x="442.55" y="92.39" class="st2" width="49.77" height="12.74"/>
-	<rect id="front-filler-2g" x="442.09" y="35.41" class="st2" width="49.77" height="10.27"/>
-	<path id="rear-right-filler-2g" class="st2" d="M547.65,105.13h-55.33V70.34h73.42v16.69C565.74,97.03,557.64,105.13,547.65,105.13
-		z"/>
-	<path id="rear-left-filler-2g" class="st2" d="M386.3,105.13h56.25V70.34h-74.34v16.69C368.21,97.03,376.31,105.13,386.3,105.13z"
-		/>
-	<path id="front-left-filler-2g" class="st2" d="M386.3,35.49h56.25v34.79h-74.34V53.58C368.21,43.59,376.31,35.49,386.3,35.49z"/>
-	<path id="rear-right-filler-1g" class="st2" d="M537.08,70.75l-44.97,0v24.27l24.94,0c11.06,0,20.02-8.96,20.02-20.02V70.75z"/>
-	<rect id="rear-filler-1g" x="442.55" y="71.3" class="st2" width="49.34" height="23.56"/>
-	<rect id="front-filler-1g" x="442.98" y="46.34" class="st2" width="49.34" height="22.69"/>
-	<path id="front-right-filler-1g" class="st2" d="M537.29,70.27h-45.39V46.34h25.37c11.06,0,20.02,8.96,20.02,20.02V70.27z"/>
-	<path id="rear-left-filler-1g" class="st2" d="M397.16,70.92l45.39,0l0,23.94l-25.37,0c-11.06,0-20.02-8.96-20.02-20.02V70.92z"/>
-	<path id="front-left-filler-1g" class="st2" d="M397.16,70.27h45.39V46.34h-25.37c-11.06,0-20.02,8.96-20.02,20.02V70.27z"/>
-	<path class="st22" d="M479.32,86.14h-24.19c-6.94,0-12.57-5.63-12.57-12.57v-6.59c0-6.94,5.63-12.57,12.57-12.57h24.19
-		c6.94,0,12.57,5.63,12.57,12.57v6.59C491.89,80.51,486.26,86.14,479.32,86.14z"/>
+	<path class="st21" d="M575.3,114.2H359.1c-11.4,0-20.6-9.2-20.6-20.7V48.3c0-11.4,9.2-20.6,20.6-20.6h216.3
+		c11.4,0,20.7,9.2,20.7,20.6v45.3C596,105,586.8,114.2,575.3,114.2z"/>
+	<rect id="rear-filler-3g" x="442.3" y="103.1" class="st2" width="49.8" height="10.2"/>
+	<rect id="front-filler-3g" x="442.1" y="27.6" class="st2" width="49.8" height="7.8"/>
+	<path id="rear-left-filler-3g" class="st2" d="M338.4,71h103.7v42.7h-83c-11.4,0-20.6-9.2-20.6-20.7L338.4,71L338.4,71z"/>
+	<path id="rear-right-filler-3g" class="st2" d="M596,71H492.3v42.7h83c11.4,0,20.7-9.2,20.7-20.7L596,71z"/>
+	<path id="front-right-filler-3g" class="st2" d="M596,70.3H492.3V27.6h83c11.4,0,20.7,9.2,20.7,20.6L596,70.3L596,70.3z"/>
+	<path id="front-left-filler-3g" class="st2" d="M338.4,70.3h103.7V27.6h-83c-11.4,0-20.6,9.2-20.6,20.6L338.4,70.3L338.4,70.3z"/>
+	<path id="front-right-filler-2g_1_" class="st2" d="M547.7,35.5h-55.8v34.8h73.8V53.6C565.7,43.6,557.6,35.5,547.7,35.5z"/>
+	<rect id="rear-filler-2g" x="442.5" y="92.4" class="st2" width="49.8" height="12.7"/>
+	<rect id="front-filler-2g" x="442.1" y="35.4" class="st2" width="49.8" height="10.3"/>
+	<path id="rear-right-filler-2g" class="st2" d="M547.7,105.1h-55.3V70.3h73.4V87C565.7,97,557.6,105.1,547.7,105.1z"/>
+	<path id="rear-left-filler-2g" class="st2" d="M386.3,105.1h56.3V70.3h-74.3V87C368.2,97,376.3,105.1,386.3,105.1z"/>
+	<path id="front-left-filler-2g" class="st2" d="M386.3,35.5h56.3v34.8h-74.3V53.6C368.2,43.6,376.3,35.5,386.3,35.5z"/>
+	<path id="rear-right-filler-1g" class="st2" d="M537.1,70.8h-45V95H517c11.1,0,20-9,20-20L537.1,70.8L537.1,70.8z"/>
+	<rect id="rear-filler-1g" x="442.5" y="71.3" class="st2" width="49.3" height="23.6"/>
+	<rect id="front-filler-1g" x="443" y="46.3" class="st2" width="49.3" height="22.7"/>
+	<path id="front-right-filler-1g" class="st2" d="M537.3,70.3h-45.4V46.3h25.4c11.1,0,20,9,20,20V70.3z"/>
+	<path id="rear-left-filler-1g" class="st2" d="M397.2,70.9h45.4v23.9h-25.4c-11.1,0-20-9-20-20V70.9z"/>
+	<path id="front-left-filler-1g" class="st2" d="M397.2,70.3h45.4V46.3h-25.4c-11.1,0-20,9-20,20V70.3z"/>
+	<path class="st22" d="M479.3,86.1h-24.2c-6.9,0-12.6-5.6-12.6-12.6V67c0-6.9,5.6-12.6,12.6-12.6h24.2c6.9,0,12.6,5.6,12.6,12.6v6.6
+		C491.9,80.5,486.3,86.1,479.3,86.1z"/>
 	<text id="g-text" transform="matrix(1 0 0 1 458.3423 73.291)" class="st4 st19">5.1G</text>
 </g>
 </svg>
