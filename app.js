@@ -9,8 +9,6 @@ angular.module('beamng.apps')
 				
 				StreamsManager.add(['engineInfo','electrics','engineThermalData']);
 				scope.raceTime = null;
-				var offset = 0;
-				var newLap = false;
 				var totalDistance = parseFloat(sessionStorage.getItem('apps:simpleTrip.totalDistance')) || 0;
 									new_lap=false;
 									timer=1;
@@ -29,6 +27,7 @@ angular.module('beamng.apps')
 									gy = 0;
 									lap_time = 0;
 									best_lap = -1;
+									offset = 0;
 				element.on('load', function () {
 					let svg = element[0].contentDocument
 					let values = []
@@ -42,18 +41,18 @@ angular.module('beamng.apps')
 
 						brakes.sort(); 
 						if (streams.engineInfo[1] !== values[1] || streams.engineInfo[0] !== values[0]) {
-							values[0] = streams.engineInfo[0]; //rpm idle
-							values[1] = streams.engineInfo[1]; //rpm max
+							values[0] = streams.engineInfo[0]; 
+							values[1] = streams.engineInfo[1]; 
 							svg.getElementById('max_x5F_rpm').innerHTML = values[1]/1000 + "k";
 						}
 						let rpm = Math.round(Number(streams.engineInfo[4]));
 						svg.getElementById('rpm_x5F_text').innerHTML = rpm + " RPM";
-						svg.getElementById('filler').setAttribute("width", (657.566 * rpm/values[1])) ;
-						if(rpm > values[1] * 0.95) { 
+						svg.getElementById('filler').setAttribute("width", (657.566 * rpm/ values[1])) ;
+						if(rpm >  values[1] * 0.95) { 
 							rgb = '(255,0,0)'
 							rgb_filler = '(255,0,0)';
 						}
-						else if(rpm > values[1] * 0.9) { 
+						else if(rpm >  values[1] * 0.9) { 
 							
 							rgb = '(255,255,0)'
 							rgb_filler = '(255,255,0)';
@@ -108,7 +107,7 @@ angular.module('beamng.apps')
 							svg.getElementById('fuel_2_').style.fill = "rgb(0,0,0)"
 						}
 						if (streams.engineThermalData) {
-							svg.getElementById('temps_2_').innerHTML = "Temp: " + Math.round(streams.engineThermalData.coolantTemperature) + "C"
+							svg.getElementById('temps_2_').innerHTML = "Temp: " + UiUnits.buildString('temperature', streams.engineThermalData.coolantTemperature, 1)
 							if (streams.engineThermalData.coolantTemperature > 120)
 							{
 								svg.getElementById('temps_2_').style.fill = "rgb(255,0,0)"
@@ -124,7 +123,7 @@ angular.module('beamng.apps')
 						  }
 						if (streams.forcedInductionInfo) {
 							//svg.getElementById('boost_x5F_filler').setAttribute("width",Math.round(streams.forcedInductionInfo.boost/100)*80.368)
-							svg.getElementById('boost_2_').innerHTML = Math.round(streams.forcedInductionInfo.boost)/100 + " bar";
+							svg.getElementById('boost_2_').innerHTML = UiUnits.buildString('pressure', streams.forcedInductionInfo.boost,1)
 						}
 						var currentDate = new Date();
 						var currentHour = currentDate.getHours();
@@ -135,7 +134,7 @@ angular.module('beamng.apps')
 						}
 
 						currentTime = currentHour + ":" + currentMinute;
-						svg.getElementById('time').innerHTML = "Clock:" + currentTime;
+						svg.getElementById('time').innerHTML = "Clock: " + currentTime;
 						for (i = 0; i < brakes.length; i++) { //changes the colour of the disks and text according to their values
 							if (streams.wheelThermalData.wheels[brakes[i]] != null) {
 							  svg.getElementById('brake'+i).innerHTML = Math.round(UiUnits.temperature(streams.wheelThermalData.wheels[brakes[i]].brakeSurfaceTemperature).val)+
@@ -152,7 +151,7 @@ angular.module('beamng.apps')
 						var wheelSpeed = streams.electrics.wheelspeed;
 						if (timer < 0) {
 							totalDistance += ((1.0 - timer) * wheelSpeed);
-							svg.getElementById('driven_x5F_distance').innerHTML = Math.round(totalDistance/100)/10 + "km";
+							
 							count++;
 	
 				
@@ -163,12 +162,13 @@ angular.module('beamng.apps')
 							}
 				
 							previousFuel = streams.engineInfo[11];
-							range = fuelConsumptionRate > 0 ? UiUnits.buildString('distance', streams.engineInfo[11] / fuelConsumptionRate, 2) : (streams.electrics.wheelspeed > 0.1 ? 'Infinity' : UiUnits.buildString('distance', 0));
+							range = fuelConsumptionRate > 0 ? UiUnits.buildString('distance', streams.engineInfo[11] / fuelConsumptionRate, 2) : (streams.electrics.wheelspeed > 0.1 ? 'Infintiy' : UiUnits.buildString('distance', 0));
 							avgFuelConsumptionRate += (fuelConsumptionRate - avgFuelConsumptionRate) / count;
 							timer = 1;
-							svg.getElementById('average_x5F_fuel_x5F_text').innerHTML = Math.round(avgFuelConsumptionRate*100000) + "L/100km"
-							svg.getElementById('range_x5F_text').innerHTML = range
-							svg.getElementById('current_x5F_fuel').innerHTML = Math.round(fuelConsumptionRate*100000) + "L/100km"
+							svg.getElementById('average_x5F_fuel_x5F_text').innerHTML = UiUnits.buildString('consumptionRate', avgFuelConsumptionRate, 1)
+							svg.getElementById('range_x5F_text').innerHTML = UiUnits.buildString('distance', range, 1)
+							svg.getElementById('current_x5F_fuel').innerHTML = UiUnits.buildString('consumptionRate', fuelConsumptionRate, 1)
+							svg.getElementById('driven_x5F_distance').innerHTML = UiUnits.buildString('distance', totalDistance, 1)
 						}
 						var gForces = {};
 
@@ -389,9 +389,6 @@ angular.module('beamng.apps')
 					function resetValues () {
 					  offset = 0;
 					  newLap = false;
-					  scope.$evalAsync(function () {
-						scope.raceTime = null;
-					  });
 					}
 			  
 					scope.$on('raceTime', function (event, data) {
@@ -407,12 +404,7 @@ angular.module('beamng.apps')
 						  
 					  });
 					});
-					// scope.$on('RaceTimeComparison', function (event, data) {
-					// 	scope.$applyAsync(function () {
-					// 	  scope.time = data.time;
-					// 	  scope.bgColor = (data.time > 0 ? 'rgba(212,0,0,0.71)' : 'rgba(60,204,0,0.71)');
-					// 	});
-					//   });
+
 					scope.$on('ScenarioResetTimer', resetValues);
 			  
 					scope.$on('RaceLapChange', function (event, data) {
