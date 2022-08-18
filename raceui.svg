@@ -22,11 +22,14 @@
 	.st16{fill:#F7931E;}
 	.st17{fill:#2E3192;}
 	.st18{font-size:28px;}
-	.st19{font-family:'MyriadPro-Regular';}
-	.st20{font-size:10px;}
-	.st21{font-size:9px;}
-	.st22{fill:#E6E6E6;stroke:#B3B3B3;stroke-miterlimit:10;}
-	.st23{fill:#E6E6E6;stroke:#999999;stroke-miterlimit:10;}
+	.st19{font-size:10px;}
+	.st20{font-size:9px;}
+	.st21{fill:#E6E6E6;stroke:#B3B3B3;stroke-miterlimit:10;}
+	.st22{fill:#E6E6E6;stroke:#999999;stroke-miterlimit:10;}
+	.st23{fill:#ED2024;}
+	.st24{fill:#00FFCF;}
+	.st25{fill:none;stroke:#020202;stroke-miterlimit:10;}
+	.st26{fill:#3B3B3B;}
 </style>
 <path id="backgrond" class="st0" d="M986.5,123h-973C6,123,0,117,0,109.6V13.5C0,6,6,0,13.5,0h973.1c7.4,0,13.5,6,13.5,13.5v96.1
 	C1000,117,994,123,986.5,123z"/>
@@ -83,12 +86,12 @@
 	<text id="delta" transform="matrix(1 0 0 1 191.0664 82.8601)" class="st4 st7">Delta: NA</text>
 </g>
 <g id="power_x5F_info">
-	<text transform="matrix(1 0 0 1 191.1 106.0771)" class="st19 st7">Max Power: 0 hp</text>
-	<text transform="matrix(1 0 0 1 191.066 39.231)" class="st19 st7">Fly Wheel Trqe: 0 nm</text>
-	<text transform="matrix(1 0 0 1 191.1 52.6)" class="st19 st7">Wheel Trqe: 0 nm</text>
-	<text transform="matrix(1 0 0 1 191.1 79.3384)" class="st19 st7">Power: 0 hp</text>
-	<text transform="matrix(1 0 0 1 191.1 92.7076)" class="st19 st7">Max Torque: 0 nm</text>
-	<text transform="matrix(1 0 0 1 191.0999 65.9692)" class="st19 st7">Torqe: 0 nm</text>
+	<text transform="matrix(1 0 0 1 191.1 106.0771)" class="st4 st7">Max Power: 0 hp</text>
+	<text transform="matrix(1 0 0 1 191.066 39.231)" class="st4 st7">Fly Wheel Trqe: 0 nm</text>
+	<text transform="matrix(1 0 0 1 191.1 52.6)" class="st4 st7">Wheel Trqe: 0 nm</text>
+	<text transform="matrix(1 0 0 1 191.1 79.3384)" class="st4 st7">Power: 0 hp</text>
+	<text transform="matrix(1 0 0 1 191.1 92.7076)" class="st4 st7">Max Torque: 0 nm</text>
+	<text transform="matrix(1 0 0 1 191.0999 65.9692)" class="st4 st7">Torqe: 0 nm</text>
 </g>
 <path id="time_x5F_rec" class="st2" d="M989.3,119.1h-69.9c-3.6,0-6.5-2.9-6.5-6.5v-9.3c0-3.6,2.9-6.5,6.5-6.5h69.9
 	c3.6,0,6.5,2.9,6.5,6.5v9.3C995.8,116.2,992.9,119.1,989.3,119.1z"/>
@@ -102,19 +105,19 @@
 		c3.6,0,6.5,2.9,6.5,6.5v12.9C689.6,49.7,686.7,52.6,683.1,52.6z"/>
 	<path id="range_x5F_rec" class="st2" d="M683.1,113.6H621c-3.6,0-6.5-2.9-6.5-6.5V94.2c0-3.6,2.9-6.5,6.5-6.5h62.1
 		c3.6,0,6.5,2.9,6.5,6.5v12.9C689.6,110.7,686.7,113.6,683.1,113.6z"/>
-	<text transform="matrix(1 0 0 1 708.6223 109.3483)" class="st4 st20">Dist Driven</text>
+	<text transform="matrix(1 0 0 1 708.6223 109.3483)" class="st4 st19">Dist Driven</text>
 	<text id="driven_x5F_distance" transform="matrix(1 0 0 1 708.6227 96.8485)" class="st4 st7">100KM</text>
-	<text id="range_x5F_text" transform="matrix(1 0 0 1 619.5272 99.331)" class="st4 st20">100KM</text>
-	<text transform="matrix(1 0 0 1 619.5273 109.3491)" class="st4 st21">Range</text>
-	<text id="current_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5276 50.1345)" class="st4 st21">Avg Fuel</text>
-	<text id="average_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5269 36.5523)" class="st4 st21">11L/100km</text>
-	<text id="current_x5F_fuel" transform="matrix(1 0 0 1 619.5268 68.8157)" class="st4 st21">30L/100km</text>
-	<text transform="matrix(1 0 0 1 619.5273 81.3159)" class="st4 st21">Current Fuel</text>
+	<text id="range_x5F_text" transform="matrix(1 0 0 1 619.5272 99.331)" class="st4 st19">100KM</text>
+	<text transform="matrix(1 0 0 1 619.5273 109.3491)" class="st4 st20">Range</text>
+	<text id="current_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5276 50.1345)" class="st4 st20">Avg Fuel</text>
+	<text id="average_x5F_fuel_x5F_text" transform="matrix(1 0 0 1 619.5269 36.5523)" class="st4 st20">11L/100km</text>
+	<text id="current_x5F_fuel" transform="matrix(1 0 0 1 619.5268 68.8157)" class="st4 st20">30L/100km</text>
+	<text transform="matrix(1 0 0 1 619.5273 81.3159)" class="st4 st20">Current Fuel</text>
 </g>
 <g id="g-force-rec">
 	<g id="g-force-fillers">
 	</g>
-	<path class="st22" d="M575.3,114.2H359.1c-11.4,0-20.6-9.2-20.6-20.7V48.3c0-11.4,9.2-20.6,20.6-20.6h216.3
+	<path class="st21" d="M575.3,114.2H359.1c-11.4,0-20.6-9.2-20.6-20.7V48.3c0-11.4,9.2-20.6,20.6-20.6h216.3
 		c11.4,0,20.7,9.2,20.7,20.6v45.3C596,105,586.8,114.2,575.3,114.2z"/>
 	<rect id="rear-filler-3g" x="442.3" y="103.1" class="st2" width="49.8" height="10.2"/>
 	<rect id="front-filler-3g" x="442.1" y="27.6" class="st2" width="49.8" height="7.8"/>
@@ -134,8 +137,15 @@
 	<path id="front-right-filler-1g" class="st2" d="M537.3,70.3h-45.4v-24h25.4c11.1,0,20,9,20,20V70.3z"/>
 	<path id="rear-left-filler-1g" class="st2" d="M397.2,70.9h45.4v23.9h-25.4c-11.1,0-20-9-20-20V70.9z"/>
 	<path id="front-left-filler-1g" class="st2" d="M397.2,70.3h45.4v-24h-25.4c-11.1,0-20,9-20,20V70.3z"/>
-	<path class="st23" d="M479.3,86.1h-24.2c-6.9,0-12.6-5.6-12.6-12.6V67c0-6.9,5.6-12.6,12.6-12.6h24.2c6.9,0,12.6,5.6,12.6,12.6v6.6
+	<path class="st22" d="M479.3,86.1h-24.2c-6.9,0-12.6-5.6-12.6-12.6V67c0-6.9,5.6-12.6,12.6-12.6h24.2c6.9,0,12.6,5.6,12.6,12.6v6.6
 		C491.9,80.5,486.3,86.1,479.3,86.1z"/>
-	<text id="g-text" transform="matrix(1 0 0 1 458.3423 73.291)" class="st4 st20">5.1G</text>
+	<text id="g-text" transform="matrix(1 0 0 1 458.3423 73.291)" class="st4 st19">5.1G</text>
+</g>
+<text id="esc" transform="matrix(1 0 0 1 84.4457 84.4481)" class="st23 st4 st7">ECS</text>
+<text id="abs" transform="matrix(1 0 0 1 110.6521 84.4483)" class="st23 st4 st7">ABS</text>
+<g id="nitro_x5F_layer">
+	<rect id="nitro_x5F_rec_x5F_filler" x="139" y="87.7" class="st24" width="32.7" height="5"/>
+	<rect id="nitro_x5F_rec" x="139" y="87.7" class="st25" width="32.7" height="5"/>
+	<text id="nitro" transform="matrix(1 0 0 1 138.9546 84.4483)" class="st26 st4 st7">Nitro</text>
 </g>
 </svg>

@@ -32,7 +32,10 @@ angular.module('beamng.apps')
 					let svg = element[0].contentDocument
 					let values = []
 					svg.getElementById('lap_x5F_times').style.display = "none";
-					
+					svg.getElementById('boost_x5F_rec_1_').style.display = "none";
+					svg.getElementById('boost_x5F_filler_1_').style.display = "none";
+					svg.getElementById('boost_2_').style.display = "none";
+					svg.getElementById('nitro_x5F_layer').style.display = "none";
 					scope.$on('streamsUpdate', function (event, streams, data) {
 						brakes = [];
 						for (i in streams.wheelThermalData.wheels) {
@@ -122,9 +125,33 @@ angular.module('beamng.apps')
 							
 						  }
 						if (streams.forcedInductionInfo) {
+							svg.getElementById('boost_x5F_rec_1_').style.display = "block";
+							svg.getElementById('boost_x5F_filler_1_').style.display = "block";
+							svg.getElementById('boost_2_').style.display = "block";
 							//svg.getElementById('boost_x5F_filler').setAttribute("width",Math.round(streams.forcedInductionInfo.boost/100)*80.368)
 							svg.getElementById('boost_2_').innerHTML = UiUnits.buildString('pressure', streams.forcedInductionInfo.boost,1)
 						}
+						if (streams.n2oInfo) {
+							svg.getElementById('nitro_x5F_layer').style.display = "block";
+							if (streams.n2oInfo.isActive) {
+								svg.getElementById('nitro').style.fill = "rgb(59,87,255)"
+							}
+							else{
+								svg.getElementById('nitro').style.fill = "rgb(59,59,59)"
+							}
+							svg.getElementById('nitro_x5F_rec_x5F_filler').setAttribute("width",streams.n2oInfo.tankRatio*32.7);
+						}
+						if (streams.electrics.abs > 0.5) {
+							svg.getElementById('abs').style.display = "block";
+						} else {
+							svg.getElementById('abs').style.display = "none";
+						}
+						if (streams.electrics.esc > 0.5) {
+							svg.getElementById('esc').style.display = "block";
+						} else {
+							svg.getElementById('esc').style.display = "none";
+						}
+						svg.getElementById('lap_x5F_times').style.display = "none";
 						var currentDate = new Date();
 						var currentHour = currentDate.getHours();
 						var currentMinute = currentDate.getMinutes();
