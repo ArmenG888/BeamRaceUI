@@ -15,9 +15,9 @@
 	.st9{font-size:24px;}
 	.st10{font-size:120px;}
 	.st11{fill:#ED1C24;}
-	.st12{fill:#29ABE2;}
-	.st13{fill:#FF0000;}
-	.st14{fill:#00FF00;}
+	.st12{fill:#00FFB3;}
+	.st13{fill:#00FF00;}
+	.st14{fill:#FF0000;}
 	.st15{fill:#CCCCCC;}
 	.st16{fill:#F7931E;}
 	.st17{fill:#2E3192;}
@@ -29,7 +29,7 @@
 	.st23{fill:#ED2024;}
 	.st24{fill:#00FFCF;}
 	.st25{fill:none;stroke:#020202;stroke-miterlimit:10;}
-	.st26{fill:#3B3B3B;}
+	.st26{fill:#3B57FF;}
 </style>
 <path id="backgrond" class="st0" d="M986.5,123h-973C6,123,0,117,0,109.6V13.5C0,6,6,0,13.5,0h973.1c7.4,0,13.5,6,13.5,13.5v96.1
 	C1000,117,994,123,986.5,123z"/>
@@ -50,14 +50,17 @@
 <text id="rpm_x5F_text" transform="matrix(1 0 0 1 84.4457 21.2893)" class="st4 st8">0 RPM</text>
 <rect id="top_x5F_rpm" x="848.6" y="9.4" class="st11" width="23" height="11.8"/>
 <g id="pedals">
-	<path id="pedals_x5F_rec" class="st2" d="M987.8,87.7H921c-4.4,0-8-3.6-8-8V12.9c0-4.4,3.6-8,8-8h66.8c4.4,0,8,3.6,8,8v66.8
-		C995.8,84.2,992.2,87.7,987.8,87.7z"/>
-	<rect id="clutch" x="921.4" y="8.1" class="st1" width="14.5" height="63.2"/>
-	<rect id="gas" x="970.8" y="8.1" class="st1" width="14.5" height="63.2"/>
-	<rect id="brake" x="946.3" y="8.1" class="st1" width="14.5" height="63.2"/>
-	<rect id="clutch_x5F_filler_1_" x="921.4" y="8.1" class="st12" width="14.5" height="63.2"/>
-	<rect id="brake_x5F_filler" x="946.7" y="8.1" class="st13" width="14.5" height="63.2"/>
-	<rect id="gas_x5F_filler" x="970.8" y="8.1" class="st14" width="14.5" height="63.2"/>
+<path id="pedals_x5F_rec" class="st2" d="M987.83,87.74h-66.85c-4.4,0-7.98-3.57-7.98-7.98V12.91c0-4.4,3.57-7.98,7.98-7.98h66.85
+		c4.4,0,7.98,3.57,7.98,7.98v66.85C995.8,84.17,992.23,87.74,987.83,87.74z"/>
+	<rect id="clutch" x="921.38" y="8.08" class="st1" width="14.47" height="63.22"/>
+	<rect id="gas" x="970.76" y="8.08" class="st1" width="14.47" height="63.22"/>
+	<rect id="brake" x="946.28" y="8.08" class="st1" width="14.47" height="63.22"/>
+	
+		<rect id="clutch_x5F_filler_1_" x="921.38" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1857.2371 79.3748)" class="st11" width="14.47" height="63.22"/>
+	
+		<rect id="brake_x5F_filler" x="946.74" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1907.9474 79.3747)" class="st12" width="14.47" height="63.22"/>
+	
+		<rect id="gas_x5F_filler" x="970.76" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1955.991 79.3748)" class="st13" width="14.47" height="63.22"/>
 	<text id="clutch_x5F_text" transform="matrix(1 0 0 1 916.6714 82.8876)" class="st4 st8">100</text>
 	<text id="brake_x5F_text" transform="matrix(1 0 0 1 942.6429 82.8875)" class="st4 st8">100</text>
 	<text id="gas_x5F_text" transform="matrix(1 0 0 1 967.999 82.8876)" class="st4 st8">100</text>
@@ -69,7 +72,7 @@
 	<rect id="boost_x5F_rec_1_" x="791.3" y="96.8" class="st15" width="80.4" height="12.5"/>
 	<rect id="fuel_x5F_rec_1_" x="791.3" y="43.9" class="st15" width="80.4" height="12.5"/>
 	<rect id="boost_x5F_filler_1_" x="791.3" y="96.8" class="st16" width="80.4" height="12.5"/>
-	<rect id="temps_x5F_filler_1_" x="791.3" y="68.8" class="st13" width="80.4" height="12.5"/>
+	<rect id="temps_x5F_filler_1_" x="791.3" y="68.8" class="st14" width="80.4" height="12.5"/>
 	<rect id="fuel_x5F_filler_1_" x="791.3" y="43.9" class="st17" width="80.4" height="12.5"/>
 	<text id="fuel_2_" transform="matrix(1 0 0 1 791.2897 39.6079)" class="st4 st5">Fuel: NA</text>
 	<text id="temps_2_" transform="matrix(1 0 0 1 791.2897 66.0986)" class="st4 st5">Temp: NA</text>
