@@ -1,3 +1,4 @@
+<g id="pedals">
 <path id="pedals_x5F_rec" class="st2" d="M987.83,87.74h-66.85c-4.4,0-7.98-3.57-7.98-7.98V12.91c0-4.4,3.57-7.98,7.98-7.98h66.85
 		c4.4,0,7.98,3.57,7.98,7.98v66.85C995.8,84.17,992.23,87.74,987.83,87.74z"/>
 	<rect id="clutch" x="921.38" y="8.08" class="st1" width="14.47" height="63.22"/>
@@ -9,3 +10,7 @@
 		<rect id="brake_x5F_filler" x="946.74" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1907.9474 79.3747)" class="st12" width="14.47" height="63.22"/>
 	
 		<rect id="gas_x5F_filler" x="970.76" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1955.991 79.3748)" class="st13" width="14.47" height="63.22"/>
+	<text id="clutch_x5F_text" transform="matrix(1 0 0 1 916.6714 82.8876)" class="st4 st8">100</text>
+	<text id="brake_x5F_text" transform="matrix(1 0 0 1 942.6429 82.8875)" class="st4 st8">100</text>
+	<text id="gas_x5F_text" transform="matrix(1 0 0 1 967.999 82.8876)" class="st4 st8">100</text>
+</g>

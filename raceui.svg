@@ -17,9 +17,9 @@
 	.st11{fill:#ED1C24;}
 	.st12{fill:#00FFB3;}
 	.st13{fill:#00FF00;}
-	.st14{fill:#FF0000;}
-	.st15{fill:#CCCCCC;}
-	.st16{fill:#F7931E;}
+	.st14{fill:#CCCCCC;}
+	.st15{fill:#F7931E;}
+	.st16{fill:#FF0000;}
 	.st17{fill:#2E3192;}
 	.st18{font-size:28px;}
 	.st19{font-size:10px;}
@@ -38,7 +38,7 @@
 	<path id="brake_x5F_temps_x5F_rec" class="st2" d="M770.6,78.1h-59c-4.4,0-8-3.6-8-8V35.4c0-4.4,3.6-8,8-8h59c4.4,0,8,3.6,8,8v34.7
 		C778.5,74.5,775,78.1,770.6,78.1z"/>
 	<text id="brake1" transform="matrix(1 0 0 1 708.622 44.4975)" class="st3 st4 st5">32C</text>
-	<text id="brake3" transform="matrix(1 0 0 1 741.0546 69.7853)" class="st3 st4 st5">32C</text>
+	<text id="brake3" transform="matrix(1 0 0 1 741.0546 69.1179)" class="st3 st4 st5">32C</text>
 	<text id="brake2" transform="matrix(1 0 0 1 708.6223 69.1184)" class="st3 st4 st5">32C</text>
 	<text id="brake0" transform="matrix(1 0 0 1 741.0551 44.4973)" class="st3 st4 st5">32C</text>
 </g>
@@ -68,18 +68,16 @@
 <g id="engine_x5F_info">
 	<path id="engine_x5F_info_x5F_rec" class="st2" d="M869.9,115.2h-77.2c-4.4,0-8-3.6-8-8V35.4c0-4.4,3.6-8,8-8h77.2c4.4,0,8,3.6,8,8
 		v71.8C877.8,111.6,874.3,115.2,869.9,115.2z"/>
-	<rect id="temps_x5F_rec_1_" x="791.3" y="68.8" class="st15" width="80.4" height="12.5"/>
-	<rect id="boost_x5F_rec_1_" x="791.3" y="96.8" class="st15" width="80.4" height="12.5"/>
-	<rect id="fuel_x5F_rec_1_" x="791.3" y="43.9" class="st15" width="80.4" height="12.5"/>
-	<rect id="boost_x5F_filler_1_" x="791.3" y="96.8" class="st16" width="80.4" height="12.5"/>
-	<rect id="temps_x5F_filler_1_" x="791.3" y="68.8" class="st14" width="80.4" height="12.5"/>
+	<rect id="temps_x5F_rec_1_" x="791.3" y="68.8" class="st14" width="80.4" height="12.5"/>
+	<rect id="boost_x5F_rec_1_" x="791.3" y="96.8" class="st14" width="80.4" height="12.5"/>
+	<rect id="fuel_x5F_rec_1_" x="791.3" y="43.9" class="st14" width="80.4" height="12.5"/>
+	<rect id="boost_x5F_filler_1_" x="791.3" y="96.8" class="st15" width="80.4" height="12.5"/>
+	<rect id="temps_x5F_filler_1_" x="791.3" y="68.8" class="st16" width="80.4" height="12.5"/>
 	<rect id="fuel_x5F_filler_1_" x="791.3" y="43.9" class="st17" width="80.4" height="12.5"/>
 	<text id="fuel_2_" transform="matrix(1 0 0 1 791.2897 39.6079)" class="st4 st5">Fuel: NA</text>
 	<text id="temps_2_" transform="matrix(1 0 0 1 791.2897 66.0986)" class="st4 st5">Temp: NA</text>
 	<text id="boost_2_" transform="matrix(1 0 0 1 791.2899 92.3883)" class="st4 st5">Boost: NA</text>
 </g>
-<path id="lap_x5F_times_x5F_rec" class="st2" d="M312.7,115.2H196.4c-4.4,0-8-3.6-8-8V32.4c0-4.4,3.6-8,8-8h116.3c4.4,0,8,3.6,8,8
-	v74.8C320.7,111.6,317.1,115.2,312.7,115.2z"/>
 <g id="lap_x5F_times">
 	<text id="best_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0662 70.271)" class="st4 st7">Best: NA</text>
 	<text id="last_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0663 57.6821)" class="st4 st7">Last: NA</text>
@@ -88,13 +86,14 @@
 	<text id="check_x5F_point" transform="matrix(1 0 0 1 191.0659 95.449)" class="st4 st7">Check Point: NA </text>
 	<text id="delta" transform="matrix(1 0 0 1 191.0664 82.8601)" class="st4 st7">Delta: NA</text>
 </g>
+<path id="lap_x5F_times_x5F_rec" class="st2" d="M325.4,114.2H197.2c-4.8,0-8.8-3.4-8.8-7.6V35c0-4.2,4-7.6,8.8-7.6h128.2
+	c4.8,0,8.8,3.4,8.8,7.6v71.5C334.2,110.8,330.2,114.2,325.4,114.2z"/>
 <g id="power_x5F_info">
-	<text transform="matrix(1 0 0 1 191.1 106.0771)" class="st4 st7">Max Power: 0 hp</text>
-	<text transform="matrix(1 0 0 1 191.066 39.231)" class="st4 st7">Fly Wheel Trqe: 0 nm</text>
-	<text transform="matrix(1 0 0 1 191.1 52.6)" class="st4 st7">Wheel Trqe: 0 nm</text>
-	<text transform="matrix(1 0 0 1 191.1 79.3384)" class="st4 st7">Power: 0 hp</text>
-	<text transform="matrix(1 0 0 1 191.1 92.7076)" class="st4 st7">Max Torque: 0 nm</text>
-	<text transform="matrix(1 0 0 1 191.0999 65.9692)" class="st4 st7">Torqe: 0 nm</text>
+	<text id="air_x5F_speed" transform="matrix(1 0 0 1 191.0998 92.35)" class="st4 st5">Air Speed:</text>
+	<text id="fly_x5F_wheel_x5F_trqe" transform="matrix(1 0 0 1 191.066 39.231)" class="st4 st5">Fly Wheel Trqe: 0 nm</text>
+	<text id="wheel_x5F_torqe" transform="matrix(1 0 0 1 191.1 65.8427)" class="st4 st5">Wheel Trqe: 0 nm</text>
+	<text id="wheel_x5F_power" transform="matrix(1 0 0 1 191.1 79.3384)" class="st4 st5">Wheel Power: 0 PS</text>
+	<text id="fly_x5F_wheel_x5F_power" transform="matrix(1 0 0 1 191.0999 52.6)" class="st4 st5">Fly Wheel Pwr: 0 PS</text>
 </g>
 <path id="time_x5F_rec" class="st2" d="M989.3,119.1h-69.9c-3.6,0-6.5-2.9-6.5-6.5v-9.3c0-3.6,2.9-6.5,6.5-6.5h69.9
 	c3.6,0,6.5,2.9,6.5,6.5v9.3C995.8,116.2,992.9,119.1,989.3,119.1z"/>
@@ -120,35 +119,35 @@
 <g id="g-force-rec">
 	<g id="g-force-fillers">
 	</g>
-	<path class="st21" d="M575.3,114.2H359.1c-11.4,0-20.6-9.2-20.6-20.7V48.3c0-11.4,9.2-20.6,20.6-20.6h216.3
-		c11.4,0,20.7,9.2,20.7,20.6v45.3C596,105,586.8,114.2,575.3,114.2z"/>
-	<rect id="rear-filler-3g" x="442.3" y="103.1" class="st2" width="49.8" height="10.2"/>
-	<rect id="front-filler-3g" x="442.1" y="27.6" class="st2" width="49.8" height="7.8"/>
-	<path id="rear-left-filler-3g" class="st2" d="M338.4,71h103.7v42.7h-83c-11.4,0-20.6-9.2-20.6-20.7L338.4,71L338.4,71z"/>
-	<path id="rear-right-filler-3g" class="st2" d="M596,71H492.3v42.7h83c11.4,0,20.7-9.2,20.7-20.7V71z"/>
-	<path id="front-right-filler-3g" class="st2" d="M596,70.3H492.3V27.6h83c11.4,0,20.7,9.2,20.7,20.6V70.3L596,70.3z"/>
-	<path id="front-left-filler-3g" class="st2" d="M338.4,70.3h103.7V27.6h-83c-11.4,0-20.6,9.2-20.6,20.6L338.4,70.3L338.4,70.3z"/>
-	<path id="front-right-filler-2g_1_" class="st2" d="M547.7,35.5h-55.8v34.8h73.8V53.6C565.7,43.6,557.6,35.5,547.7,35.5z"/>
-	<rect id="rear-filler-2g" x="442.5" y="92.4" class="st2" width="49.8" height="12.7"/>
-	<rect id="front-filler-2g" x="442.1" y="35.4" class="st2" width="49.8" height="10.3"/>
-	<path id="rear-right-filler-2g" class="st2" d="M547.7,105.1h-55.3V70.3h73.4V87C565.7,97,557.6,105.1,547.7,105.1z"/>
-	<path id="rear-left-filler-2g" class="st2" d="M386.3,105.1h56.3V70.3h-74.3V87C368.2,97,376.3,105.1,386.3,105.1z"/>
-	<path id="front-left-filler-2g" class="st2" d="M386.3,35.5h56.3v34.8h-74.3V53.6C368.2,43.6,376.3,35.5,386.3,35.5z"/>
-	<path id="rear-right-filler-1g" class="st2" d="M537.1,70.8h-45V95H517c11.1,0,20-9,20-20L537.1,70.8L537.1,70.8z"/>
-	<rect id="rear-filler-1g" x="442.5" y="71.3" class="st2" width="49.3" height="23.6"/>
-	<rect id="front-filler-1g" x="443" y="46.3" class="st2" width="49.3" height="22.7"/>
-	<path id="front-right-filler-1g" class="st2" d="M537.3,70.3h-45.4v-24h25.4c11.1,0,20,9,20,20V70.3z"/>
-	<path id="rear-left-filler-1g" class="st2" d="M397.2,70.9h45.4v23.9h-25.4c-11.1,0-20-9-20-20V70.9z"/>
-	<path id="front-left-filler-1g" class="st2" d="M397.2,70.3h45.4v-24h-25.4c-11.1,0-20,9-20,20V70.3z"/>
-	<path class="st22" d="M479.3,86.1h-24.2c-6.9,0-12.6-5.6-12.6-12.6V67c0-6.9,5.6-12.6,12.6-12.6h24.2c6.9,0,12.6,5.6,12.6,12.6v6.6
-		C491.9,80.5,486.3,86.1,479.3,86.1z"/>
-	<text id="g-text" transform="matrix(1 0 0 1 458.3423 73.291)" class="st4 st19">5.1G</text>
+	<path class="st21" d="M582.4,113.6H366.2c-11.4,0-20.6-9.2-20.6-20.7V47.7c0-11.4,9.2-20.6,20.6-20.6h216.3
+		c11.4,0,20.7,9.2,20.7,20.6V93C603.1,104.4,593.9,113.6,582.4,113.6z"/>
+	<rect id="rear-filler-3g" x="449.4" y="102.5" class="st2" width="49.8" height="10.2"/>
+	<rect id="front-filler-3g" x="449.2" y="27" class="st2" width="49.8" height="7.8"/>
+	<path id="rear-left-filler-3g" class="st2" d="M345.5,70.4h103.7v42.7h-83c-11.4,0-20.6-9.2-20.6-20.7L345.5,70.4L345.5,70.4z"/>
+	<path id="rear-right-filler-3g" class="st2" d="M603.1,70.4H499.4v42.7h83c11.4,0,20.7-9.2,20.7-20.7V70.4z"/>
+	<path id="front-right-filler-3g" class="st2" d="M603.1,69.7H499.4V27h83c11.4,0,20.7,9.2,20.7,20.6V69.7L603.1,69.7z"/>
+	<path id="front-left-filler-3g" class="st2" d="M345.5,69.7h103.7V27h-83c-11.4,0-20.6,9.2-20.6,20.6L345.5,69.7L345.5,69.7z"/>
+	<path id="front-right-filler-2g_1_" class="st2" d="M554.8,34.9H499v34.8h73.8V53C572.8,43,564.7,34.9,554.8,34.9z"/>
+	<rect id="rear-filler-2g" x="449.6" y="91.8" class="st2" width="49.8" height="12.7"/>
+	<rect id="front-filler-2g" x="449.2" y="34.8" class="st2" width="49.8" height="10.3"/>
+	<path id="rear-right-filler-2g" class="st2" d="M554.8,104.5h-55.3V69.7h73.4v16.7C572.8,96.4,564.7,104.5,554.8,104.5z"/>
+	<path id="rear-left-filler-2g" class="st2" d="M393.4,104.5h56.3V69.7h-74.3v16.7C375.3,96.4,383.4,104.5,393.4,104.5z"/>
+	<path id="front-left-filler-2g" class="st2" d="M393.4,34.9h56.3v34.8h-74.3V53C375.3,43,383.4,34.9,393.4,34.9z"/>
+	<path id="rear-right-filler-1g" class="st2" d="M544.2,70.2h-45v24.2h24.9c11.1,0,20-9,20-20L544.2,70.2L544.2,70.2z"/>
+	<rect id="rear-filler-1g" x="449.6" y="70.7" class="st2" width="49.3" height="23.6"/>
+	<rect id="front-filler-1g" x="450.1" y="45.7" class="st2" width="49.3" height="22.7"/>
+	<path id="front-right-filler-1g" class="st2" d="M544.4,69.7H499v-24h25.4c11.1,0,20,9,20,20V69.7z"/>
+	<path id="rear-left-filler-1g" class="st2" d="M404.3,70.3h45.4v23.9h-25.4c-11.1,0-20-9-20-20V70.3z"/>
+	<path id="front-left-filler-1g" class="st2" d="M404.3,69.7h45.4v-24h-25.4c-11.1,0-20,9-20,20V69.7z"/>
+	<path class="st22" d="M486.4,85.5h-24.2c-6.9,0-12.6-5.6-12.6-12.6v-6.5c0-6.9,5.6-12.6,12.6-12.6h24.2c6.9,0,12.6,5.6,12.6,12.6
+		V73C499,79.9,493.4,85.5,486.4,85.5z"/>
+	<text id="g-text" transform="matrix(1 0 0 1 465.4423 72.662)" class="st4 st19">5.1G</text>
 </g>
 <text id="esc" transform="matrix(1 0 0 1 84.4457 84.4481)" class="st23 st4 st7">ECS</text>
 <text id="abs" transform="matrix(1 0 0 1 110.6521 84.4483)" class="st23 st4 st7">ABS</text>
 <g id="nitro_x5F_layer">
-	<rect id="nitro_x5F_rec_x5F_filler" x="139" y="87.7" class="st24" width="32.7" height="5"/>
-	<rect id="nitro_x5F_rec" x="139" y="87.7" class="st25" width="32.7" height="5"/>
-	<text id="nitro" transform="matrix(1 0 0 1 138.9546 84.4483)" class="st26 st4 st7">Nitro</text>
+	<rect id="nitro_x5F_rec_x5F_filler" x="84.5" y="102.2" class="st24" width="32.7" height="5"/>
+	<rect id="nitro_x5F_rec" x="84.5" y="102.2" class="st25" width="32.7" height="5"/>
+	<text id="nitro" transform="matrix(1 0 0 1 84.4457 98.9242)" class="st26 st4 st7">Nitro</text>
 </g>
 </svg>

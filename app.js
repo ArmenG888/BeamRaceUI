@@ -189,11 +189,10 @@ angular.module('beamng.apps')
 							}
 				
 							previousFuel = streams.engineInfo[11];
-							range = fuelConsumptionRate > 0 ? UiUnits.buildString('distance', streams.engineInfo[11] / fuelConsumptionRate, 2) : (streams.electrics.wheelspeed > 0.1 ? 'Infintiy' : UiUnits.buildString('distance', 0));
 							avgFuelConsumptionRate += (fuelConsumptionRate - avgFuelConsumptionRate) / count;
 							timer = 1;
 							svg.getElementById('average_x5F_fuel_x5F_text').innerHTML = UiUnits.buildString('consumptionRate', avgFuelConsumptionRate, 1)
-							svg.getElementById('range_x5F_text').innerHTML = UiUnits.buildString('distance', range, 1)
+							svg.getElementById('range_x5F_text').innerHTML = fuelConsumptionRate > 0 ? UiUnits.buildString('distance', streams.engineInfo[11] / fuelConsumptionRate, 2) : (streams.electrics.wheelspeed > 0.1 ? 'Infintiy' : UiUnits.buildString('distance', 0));;
 							svg.getElementById('current_x5F_fuel').innerHTML = UiUnits.buildString('consumptionRate', fuelConsumptionRate, 1)
 							svg.getElementById('driven_x5F_distance').innerHTML = UiUnits.buildString('distance', totalDistance, 1)
 						}
@@ -406,7 +405,12 @@ angular.module('beamng.apps')
 							svg.getElementById('g-text').innerHTML = Math.round(gx*10)/10 + 'G';
 						}
 
-						
+						svg.getElementById('fly_x5F_wheel_x5F_power').innerHTML = "Fly Wheel Pwr: " + UiUnits.buildString('power', Math.round(streams.engineInfo[4]*streams.engineInfo[8] * Math.PI/30000 * 1.34102), 0);
+						svg.getElementById('wheel_x5F_power').innerHTML = "Wheel Power: " + UiUnits.buildString('power', Math.round(streams.engineInfo[20]/1000 * 1.34102), 0);
+						svg.getElementById('fly_x5F_wheel_x5F_trqe').innerHTML = "Fly Wheel Trqe: " + UiUnits.buildString('torque', Math.round(streams.engineInfo[8]), 0);
+						svg.getElementById('wheel_x5F_torqe').innerHTML = "Wheel Trqe: " + UiUnits.buildString('torque', Math.round(streams.engineInfo[19]), 0);
+						svg.getElementById('air_x5F_speed').innerHTML = "Air Speed: " + UiUnits.buildString('speed', streams.electrics.airspeed, 0);
+
 						//console.log(gxMax+','+gyMax+','+gyMin);
 						
 						
