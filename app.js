@@ -6,7 +6,7 @@ angular.module('beamng.apps')
 			replace: true,
 			restrict: 'EA',
 			link: function (scope, element, attrs) {
-				
+				element.css({transition:'opacity 0.3s ease'})
 				StreamsManager.add(['engineInfo','electrics','engineThermalData']);
 				scope.raceTime = null;
 				var totalDistance = parseFloat(sessionStorage.getItem('apps:simpleTrip.totalDistance')) || 0;
@@ -128,7 +128,15 @@ angular.module('beamng.apps')
 							svg.getElementById('boost_x5F_rec_1_').style.display = "block";
 							svg.getElementById('boost_x5F_filler_1_').style.display = "block";
 							svg.getElementById('boost_2_').style.display = "block";
-							//svg.getElementById('boost_x5F_filler').setAttribute("width",Math.round(streams.forcedInductionInfo.boost/100)*80.368)
+							//svg.getElementById('boost_x5F_filler_1_').setAttribute("width",streams.forcedInductionInfo.boost/200*80.368)
+							
+							if(streams.forcedInductionInfo.boost/200*80.368 > 80.368)
+							{
+								svg.getElementById('boost_x5F_filler_1_').setAttribute("width",80.368)
+							}
+							else{
+								svg.getElementById('boost_x5F_filler_1_').setAttribute("width",streams.forcedInductionInfo.boost/200*80.368)
+							}
 							svg.getElementById('boost_2_').innerHTML = UiUnits.buildString('pressure', streams.forcedInductionInfo.boost,1)
 						}
 						if (streams.n2oInfo) {
@@ -163,13 +171,19 @@ angular.module('beamng.apps')
 						currentTime = currentHour + ":" + currentMinute;
 						svg.getElementById('time').innerHTML = "Clock: " + currentTime;
 						for (i = 0; i < brakes.length; i++) { //changes the colour of the disks and text according to their values
-							if (streams.wheelThermalData.wheels[brakes[i]] != null) {
-							  svg.getElementById('brake'+i).innerHTML = Math.round(UiUnits.temperature(streams.wheelThermalData.wheels[brakes[i]].brakeSurfaceTemperature).val)+
-							   UiUnits.temperature(streams.wheelThermalData.wheels[brakes[i]].brakeSurfaceTemperature).unit;
+							try {
+								if (streams.wheelThermalData.wheels[brakes[i]] != null) {
+									svg.getElementById('brake'+i).innerHTML = Math.round(UiUnits.temperature(streams.wheelThermalData.wheels[brakes[i]].brakeSurfaceTemperature).val)+
+									UiUnits.temperature(streams.wheelThermalData.wheels[brakes[i]].brakeSurfaceTemperature).unit;
+								}
+								else {
+								   break;
+								}
+							  }
+							catch(err) {
+								break;
 							}
-							else {
-							  return;
-							}
+							
 						}
 						prevTime = curTime;
 
@@ -230,20 +244,20 @@ angular.module('beamng.apps')
 								svg.getElementById('front-filler-2g').style.fill = "rgb(255,0,0)";
 							}
 							else{
-								svg.getElementById('front-filler-2g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('front-filler-2g').style.fill = "rgba(230,230,230,0)";
 							}
 							if(gyMax > 3)
 							{
 								svg.getElementById('front-filler-3g').style.fill = "rgb(255,0,0)";
 							}
 							else{
-								svg.getElementById('front-filler-3g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('front-filler-3g').style.fill = "rgba(230,230,230,0)";
 							}
 						}	
 						else{
-							svg.getElementById('front-filler-1g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('front-filler-2g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('front-filler-3g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-filler-1g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('front-filler-2g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('front-filler-3g').style.fill = "rgba(230,230,230,0)";
 						}
 						if (gyMin > 0.25) // rear
 						{
@@ -252,21 +266,21 @@ angular.module('beamng.apps')
 								svg.getElementById('rear-filler-2g').style.fill = "rgb(255,0,0)";
 							}
 							else{
-								svg.getElementById('rear-filler-2g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('rear-filler-2g').style.fill = "rgba(230,230,230,0)";
 							}
 							if(gyMin > 1)
 							{
 								svg.getElementById('rear-filler-3g').style.fill = "rgb(255,0,0)";
 							}
 							else{
-								svg.getElementById('rear-filler-3g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('rear-filler-3g').style.fill = "rgba(230,230,230,0)";
 							}
 							svg.getElementById('rear-filler-1g').style.fill = "rgb(255,0,0)";
 						}
 						else{
-							svg.getElementById('rear-filler-1g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('rear-filler-2g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('rear-filler-3g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-filler-1g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('rear-filler-2g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('rear-filler-3g').style.fill = "rgba(230,230,230,0)";
 						}
 						if (gyMin > gyMax ) // rear
 						{
@@ -279,7 +293,7 @@ angular.module('beamng.apps')
 								}
 								else
 								{
-									svg.getElementById('rear-left-filler-2g').style.fill = "rgb(230,230,230)";
+									svg.getElementById('rear-left-filler-2g').style.fill = "rgba(230,230,230,0)";
 								}
 								if (gxMin > 4)
 								{
@@ -287,13 +301,13 @@ angular.module('beamng.apps')
 								}
 								else
 								{
-									svg.getElementById('rear-left-filler-3g').style.fill = "rgb(230,230,230)";
+									svg.getElementById('rear-left-filler-3g').style.fill = "rgba(230,230,230,0)";
 								}
 							}
 							else{
-								svg.getElementById('rear-left-filler-1g').style.fill = "rgb(230,230,230)";
-								svg.getElementById('rear-left-filler-2g').style.fill = "rgb(230,230,230)";
-								svg.getElementById('rear-left-filler-3g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('rear-left-filler-1g').style.fill = "rgba(230,230,230,0)";
+								svg.getElementById('rear-left-filler-2g').style.fill = "rgba(230,230,230,0)";
+								svg.getElementById('rear-left-filler-3g').style.fill = "rgba(230,230,230,0)";
 							}
 							if (gxMax > gxMin && gxMax > 0.5) // right
 							{
@@ -304,7 +318,7 @@ angular.module('beamng.apps')
 								}
 								else
 								{
-									svg.getElementById('rear-right-filler-2g').style.fill = "rgb(230,230,230)";
+									svg.getElementById('rear-right-filler-2g').style.fill = "rgba(230,230,230,0)";
 								}
 								if (gxMax > 4)
 								{
@@ -312,22 +326,22 @@ angular.module('beamng.apps')
 								}
 								else
 								{
-									svg.getElementById('rear-right-filler-3g').style.fill = "rgb(230,230,230)";
+									svg.getElementById('rear-right-filler-3g').style.fill = "rgba(230,230,230,0)";
 								}
 							}
 							else{
-								svg.getElementById('rear-right-filler-1g').style.fill = "rgb(230,230,230)";
-								svg.getElementById('rear-right-filler-2g').style.fill = "rgb(230,230,230)";
-								svg.getElementById('rear-right-filler-3g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('rear-right-filler-1g').style.fill = "rgba(230,230,230,0)";
+								svg.getElementById('rear-right-filler-2g').style.fill = "rgba(230,230,230,0)";
+								svg.getElementById('rear-right-filler-3g').style.fill = "rgba(230,230,230,0)";
 							}
 						}
 						else{
-							svg.getElementById('rear-right-filler-1g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('rear-left-filler-1g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('rear-right-filler-2g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('rear-left-filler-2g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('rear-right-filler-3g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('rear-left-filler-3g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('rear-right-filler-1g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('rear-left-filler-1g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('rear-right-filler-2g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('rear-left-filler-2g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('rear-right-filler-3g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('rear-left-filler-3g').style.fill = "rgba(230,230,230,0)";
 						}
 						if (gyMax > gyMin){
 							if (gxMin > gxMax && gxMin > 0.5) // left
@@ -339,7 +353,7 @@ angular.module('beamng.apps')
 								}
 								else
 								{
-									svg.getElementById('front-left-filler-2g').style.fill = "rgb(230,230,230)";
+									svg.getElementById('front-left-filler-2g').style.fill = "rgba(230,230,230,0)";
 								}
 								if (gxMin > 4)
 								{
@@ -347,13 +361,13 @@ angular.module('beamng.apps')
 								}
 								else
 								{
-									svg.getElementById('front-left-filler-3g').style.fill = "rgb(230,230,230)";
+									svg.getElementById('front-left-filler-3g').style.fill = "rgba(230,230,230,0)";
 								}
 							}
 							else{
-								svg.getElementById('front-left-filler-1g').style.fill = "rgb(230,230,230)";
-								svg.getElementById('front-left-filler-2g').style.fill = "rgb(230,230,230)";
-								svg.getElementById('front-left-filler-3g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('front-left-filler-1g').style.fill = "rgba(230,230,230,0)";
+								svg.getElementById('front-left-filler-2g').style.fill = "rgba(230,230,230,0)";
+								svg.getElementById('front-left-filler-3g').style.fill = "rgba(230,230,230,0)";
 							}
 							if (gxMax > gxMin && gxMax > 0.5) // right
 							{
@@ -364,7 +378,7 @@ angular.module('beamng.apps')
 								}
 								else
 								{
-									svg.getElementById('front-right-filler-2g_1_').style.fill = "rgb(230,230,230)";
+									svg.getElementById('front-right-filler-2g_1_').style.fill = "rgba(230,230,230,0)";
 								}
 								if (gxMax > 4)
 								{
@@ -372,22 +386,22 @@ angular.module('beamng.apps')
 								}
 								else
 								{
-									svg.getElementById('front-right-filler-3g').style.fill = "rgb(230,230,230)";
+									svg.getElementById('front-right-filler-3g').style.fill = "rgba(230,230,230,0)";
 								}
 							}
 							else{
-								svg.getElementById('front-right-filler-1g').style.fill = "rgb(230,230,230)";
-								svg.getElementById('front-right-filler-2g_1_').style.fill = "rgb(230,230,230)";
-								svg.getElementById('front-right-filler-3g').style.fill = "rgb(230,230,230)";
+								svg.getElementById('front-right-filler-1g').style.fill = "rgba(230,230,230,0)";
+								svg.getElementById('front-right-filler-2g_1_').style.fill = "rgba(230,230,230,0)";
+								svg.getElementById('front-right-filler-3g').style.fill = "rgba(230,230,230,0)";
 							}
 						}
 						else{
-							svg.getElementById('front-right-filler-1g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('front-left-filler-1g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('front-right-filler-2g_1_').style.fill = "rgb(230,230,230)";
-							svg.getElementById('front-left-filler-2g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('front-right-filler-3g').style.fill = "rgb(230,230,230)";
-							svg.getElementById('front-left-filler-3g').style.fill = "rgb(230,230,230)";
+							svg.getElementById('front-right-filler-1g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('front-left-filler-1g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('front-right-filler-2g_1_').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('front-left-filler-2g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('front-right-filler-3g').style.fill = "rgba(230,230,230,0)";
+							svg.getElementById('front-left-filler-3g').style.fill = "rgba(230,230,230,0)";
 						}
 						if (gyMax > gyMin)
 						{
@@ -424,10 +438,11 @@ angular.module('beamng.apps')
 			  
 					scope.$on('raceTime', function (event, data) {
 					  svg.getElementById('lap_x5F_times').style.display = "block";
+					  svg.getElementById('power_x5F_info').style.display = "none";
+					  
 					  if (newLap) {
 						offset = data.reverseTime ? 0 : data.time;
 						newLap = false;
-						 
 					  }
 					  scope.$evalAsync(function () {
 						  lap_time = (data.time - offset) * 1000

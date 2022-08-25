@@ -5,7 +5,7 @@
 <style type="text/css">
 	.st0{opacity:0.79;fill:#FFFFFF;enable-background:new    ;}
 	.st1{fill:#B3B3B3;}
-	.st2{fill:#E6E6E6;}
+	.st2{opacity:0.6;fill:#E6E6E6;}
 	.st3{fill:#0071BC;}
 	.st4{font-family:'Consolas';}
 	.st5{font-size:11px;}
@@ -24,12 +24,13 @@
 	.st18{font-size:28px;}
 	.st19{font-size:10px;}
 	.st20{font-size:9px;}
-	.st21{fill:#E6E6E6;stroke:#B3B3B3;stroke-miterlimit:10;}
-	.st22{fill:#E6E6E6;stroke:#999999;stroke-miterlimit:10;}
-	.st23{fill:#ED2024;}
-	.st24{fill:#00FFCF;}
-	.st25{fill:none;stroke:#020202;stroke-miterlimit:10;}
-	.st26{fill:#3B57FF;}
+	.st21{opacity:0.6;fill:#E6E6E6;stroke:#B3B3B3;stroke-miterlimit:10;}
+	.st22{fill:none;}
+	.st23{fill:#E6E6E6;stroke:#999999;stroke-miterlimit:10;}
+	.st24{fill:#ED2024;}
+	.st25{fill:#00FFCF;}
+	.st26{fill:none;stroke:#020202;stroke-miterlimit:10;}
+	.st27{fill:#3B57FF;}
 </style>
 <path id="backgrond" class="st0" d="M986.5,123h-973C6,123,0,117,0,109.6V13.5C0,6,6,0,13.5,0h973.1c7.4,0,13.5,6,13.5,13.5v96.1
 	C1000,117,994,123,986.5,123z"/>
@@ -50,17 +51,14 @@
 <text id="rpm_x5F_text" transform="matrix(1 0 0 1 84.4457 21.2893)" class="st4 st8">0 RPM</text>
 <rect id="top_x5F_rpm" x="848.6" y="9.4" class="st11" width="23" height="11.8"/>
 <g id="pedals">
-<path id="pedals_x5F_rec" class="st2" d="M987.83,87.74h-66.85c-4.4,0-7.98-3.57-7.98-7.98V12.91c0-4.4,3.57-7.98,7.98-7.98h66.85
-		c4.4,0,7.98,3.57,7.98,7.98v66.85C995.8,84.17,992.23,87.74,987.83,87.74z"/>
-	<rect id="clutch" x="921.38" y="8.08" class="st1" width="14.47" height="63.22"/>
-	<rect id="gas" x="970.76" y="8.08" class="st1" width="14.47" height="63.22"/>
-	<rect id="brake" x="946.28" y="8.08" class="st1" width="14.47" height="63.22"/>
-	
-		<rect id="clutch_x5F_filler_1_" x="921.38" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1857.2371 79.3748)" class="st11" width="14.47" height="63.22"/>
-	
-		<rect id="brake_x5F_filler" x="946.74" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1907.9474 79.3747)" class="st12" width="14.47" height="63.22"/>
-	
-		<rect id="gas_x5F_filler" x="970.76" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1955.991 79.3748)" class="st13" width="14.47" height="63.22"/>
+	<path id="pedals_x5F_rec" class="st2" d="M987.8,87.7H921c-4.4,0-8-3.6-8-8V12.9c0-4.4,3.6-8,8-8h66.8c4.4,0,8,3.6,8,8v66.8
+		C995.8,84.2,992.2,87.7,987.8,87.7z"/>
+	<rect id="clutch" x="921.4" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="gas" x="970.8" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="brake" x="946.3" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="clutch_x5F_filler_1_" x="921.4" y="8.1" class="st11" width="14.5" height="63.2"/>
+	<rect id="brake_x5F_filler" x="946.7" y="8.1" class="st12" width="14.5" height="63.2"/>
+	<rect id="gas_x5F_filler" x="970.8" y="8.1" class="st13" width="14.5" height="63.2"/>
 	<text id="clutch_x5F_text" transform="matrix(1 0 0 1 916.6714 82.8876)" class="st4 st8">100</text>
 	<text id="brake_x5F_text" transform="matrix(1 0 0 1 942.6429 82.8875)" class="st4 st8">100</text>
 	<text id="gas_x5F_text" transform="matrix(1 0 0 1 967.999 82.8876)" class="st4 st8">100</text>
@@ -78,6 +76,8 @@
 	<text id="temps_2_" transform="matrix(1 0 0 1 791.2897 66.0986)" class="st4 st5">Temp: NA</text>
 	<text id="boost_2_" transform="matrix(1 0 0 1 791.2899 92.3883)" class="st4 st5">Boost: NA</text>
 </g>
+<path id="lap_x5F_times_x5F_rec" class="st2" d="M325.4,114.2H197.2c-4.8,0-8.8-3.4-8.8-7.6V35c0-4.2,4-7.6,8.8-7.6h128.2
+	c4.8,0,8.8,3.4,8.8,7.6v71.5C334.2,110.8,330.2,114.2,325.4,114.2z"/>
 <g id="lap_x5F_times">
 	<text id="best_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0662 70.271)" class="st4 st7">Best: NA</text>
 	<text id="last_x5F_lap_x5F_time" transform="matrix(1 0 0 1 191.0663 57.6821)" class="st4 st7">Last: NA</text>
@@ -86,8 +86,6 @@
 	<text id="check_x5F_point" transform="matrix(1 0 0 1 191.0659 95.449)" class="st4 st7">Check Point: NA </text>
 	<text id="delta" transform="matrix(1 0 0 1 191.0664 82.8601)" class="st4 st7">Delta: NA</text>
 </g>
-<path id="lap_x5F_times_x5F_rec" class="st2" d="M325.4,114.2H197.2c-4.8,0-8.8-3.4-8.8-7.6V35c0-4.2,4-7.6,8.8-7.6h128.2
-	c4.8,0,8.8,3.4,8.8,7.6v71.5C334.2,110.8,330.2,114.2,325.4,114.2z"/>
 <g id="power_x5F_info">
 	<text id="air_x5F_speed" transform="matrix(1 0 0 1 191.0998 92.35)" class="st4 st5">Air Speed:</text>
 	<text id="fly_x5F_wheel_x5F_trqe" transform="matrix(1 0 0 1 191.066 39.231)" class="st4 st5">Fly Wheel Trqe: 0 nm</text>
@@ -117,37 +115,37 @@
 	<text transform="matrix(1 0 0 1 619.5273 81.3159)" class="st4 st20">Current Fuel</text>
 </g>
 <g id="g-force-rec">
-	<g id="g-force-fillers">
-	</g>
 	<path class="st21" d="M582.4,113.6H366.2c-11.4,0-20.6-9.2-20.6-20.7V47.7c0-11.4,9.2-20.6,20.6-20.6h216.3
 		c11.4,0,20.7,9.2,20.7,20.6V93C603.1,104.4,593.9,113.6,582.4,113.6z"/>
-	<rect id="rear-filler-3g" x="449.4" y="102.5" class="st2" width="49.8" height="10.2"/>
-	<rect id="front-filler-3g" x="449.2" y="27" class="st2" width="49.8" height="7.8"/>
-	<path id="rear-left-filler-3g" class="st2" d="M345.5,70.4h103.7v42.7h-83c-11.4,0-20.6-9.2-20.6-20.7L345.5,70.4L345.5,70.4z"/>
-	<path id="rear-right-filler-3g" class="st2" d="M603.1,70.4H499.4v42.7h83c11.4,0,20.7-9.2,20.7-20.7V70.4z"/>
-	<path id="front-right-filler-3g" class="st2" d="M603.1,69.7H499.4V27h83c11.4,0,20.7,9.2,20.7,20.6V69.7L603.1,69.7z"/>
-	<path id="front-left-filler-3g" class="st2" d="M345.5,69.7h103.7V27h-83c-11.4,0-20.6,9.2-20.6,20.6L345.5,69.7L345.5,69.7z"/>
-	<path id="front-right-filler-2g_1_" class="st2" d="M554.8,34.9H499v34.8h73.8V53C572.8,43,564.7,34.9,554.8,34.9z"/>
-	<rect id="rear-filler-2g" x="449.6" y="91.8" class="st2" width="49.8" height="12.7"/>
-	<rect id="front-filler-2g" x="449.2" y="34.8" class="st2" width="49.8" height="10.3"/>
-	<path id="rear-right-filler-2g" class="st2" d="M554.8,104.5h-55.3V69.7h73.4v16.7C572.8,96.4,564.7,104.5,554.8,104.5z"/>
-	<path id="rear-left-filler-2g" class="st2" d="M393.4,104.5h56.3V69.7h-74.3v16.7C375.3,96.4,383.4,104.5,393.4,104.5z"/>
-	<path id="front-left-filler-2g" class="st2" d="M393.4,34.9h56.3v34.8h-74.3V53C375.3,43,383.4,34.9,393.4,34.9z"/>
-	<path id="rear-right-filler-1g" class="st2" d="M544.2,70.2h-45v24.2h24.9c11.1,0,20-9,20-20L544.2,70.2L544.2,70.2z"/>
-	<rect id="rear-filler-1g" x="449.6" y="70.7" class="st2" width="49.3" height="23.6"/>
-	<rect id="front-filler-1g" x="450.1" y="45.7" class="st2" width="49.3" height="22.7"/>
-	<path id="front-right-filler-1g" class="st2" d="M544.4,69.7H499v-24h25.4c11.1,0,20,9,20,20V69.7z"/>
-	<path id="rear-left-filler-1g" class="st2" d="M404.3,70.3h45.4v23.9h-25.4c-11.1,0-20-9-20-20V70.3z"/>
-	<path id="front-left-filler-1g" class="st2" d="M404.3,69.7h45.4v-24h-25.4c-11.1,0-20,9-20,20V69.7z"/>
-	<path class="st22" d="M486.4,85.5h-24.2c-6.9,0-12.6-5.6-12.6-12.6v-6.5c0-6.9,5.6-12.6,12.6-12.6h24.2c6.9,0,12.6,5.6,12.6,12.6
+	<g id="g-force-fillers">
+	</g>
+	<rect id="rear-filler-3g" x="449.4" y="102.5" class="st22" width="49.8" height="10.2"/>
+	<rect id="front-filler-3g" x="449.2" y="27" class="st22" width="49.8" height="7.8"/>
+	<path id="rear-left-filler-3g" class="st22" d="M345.5,70.4h103.7v42.7h-83c-11.4,0-20.6-9.2-20.6-20.7L345.5,70.4L345.5,70.4z"/>
+	<path id="rear-right-filler-3g" class="st22" d="M603.1,70.4H499.4v42.7h83c11.4,0,20.7-9.2,20.7-20.7L603.1,70.4L603.1,70.4z"/>
+	<path id="front-right-filler-3g" class="st22" d="M603.1,69.7H499.4V27h83c11.4,0,20.7,9.2,20.7,20.6L603.1,69.7L603.1,69.7z"/>
+	<path id="front-left-filler-3g" class="st22" d="M345.5,69.7h103.7V27h-83c-11.4,0-20.6,9.2-20.6,20.6L345.5,69.7L345.5,69.7z"/>
+	<path id="front-right-filler-2g_1_" class="st22" d="M554.8,34.9H499v34.8h73.8V53C572.8,43,564.7,34.9,554.8,34.9z"/>
+	<rect id="rear-filler-2g" x="449.6" y="91.8" class="st22" width="49.8" height="12.7"/>
+	<rect id="front-filler-2g" x="449.2" y="34.8" class="st22" width="49.8" height="10.3"/>
+	<path id="rear-right-filler-2g" class="st22" d="M554.8,104.5h-55.3V69.7h73.4v16.7C572.8,96.4,564.7,104.5,554.8,104.5z"/>
+	<path id="rear-left-filler-2g" class="st22" d="M393.4,104.5h56.3V69.7h-74.3v16.7C375.3,96.4,383.4,104.5,393.4,104.5z"/>
+	<path id="front-left-filler-2g" class="st22" d="M393.4,34.9h56.3v34.8h-74.3V53C375.3,43,383.4,34.9,393.4,34.9z"/>
+	<path id="rear-right-filler-1g" class="st22" d="M544.2,70.2h-45v24.2h24.9c11.1,0,20-9,20-20L544.2,70.2L544.2,70.2z"/>
+	<rect id="rear-filler-1g" x="449.6" y="70.7" class="st22" width="49.3" height="23.6"/>
+	<rect id="front-filler-1g" x="450.1" y="45.7" class="st22" width="49.3" height="22.7"/>
+	<path id="front-right-filler-1g" class="st22" d="M544.4,69.7H499v-24h25.4c11.1,0,20,9,20,20V69.7z"/>
+	<path id="rear-left-filler-1g" class="st22" d="M404.3,70.3h45.4v23.9h-25.4c-11.1,0-20-9-20-20V70.3z"/>
+	<path id="front-left-filler-1g" class="st22" d="M404.3,69.7h45.4v-24h-25.4c-11.1,0-20,9-20,20V69.7z"/>
+	<path class="st23" d="M486.4,85.5h-24.2c-6.9,0-12.6-5.6-12.6-12.6v-6.5c0-6.9,5.6-12.6,12.6-12.6h24.2c6.9,0,12.6,5.6,12.6,12.6
 		V73C499,79.9,493.4,85.5,486.4,85.5z"/>
 	<text id="g-text" transform="matrix(1 0 0 1 465.4423 72.662)" class="st4 st19">5.1G</text>
 </g>
-<text id="esc" transform="matrix(1 0 0 1 84.4457 84.4481)" class="st23 st4 st7">ECS</text>
-<text id="abs" transform="matrix(1 0 0 1 110.6521 84.4483)" class="st23 st4 st7">ABS</text>
+<text id="esc" transform="matrix(1 0 0 1 84.4457 84.4481)" class="st24 st4 st7">ECS</text>
+<text id="abs" transform="matrix(1 0 0 1 110.6521 84.4483)" class="st24 st4 st7">ABS</text>
 <g id="nitro_x5F_layer">
-	<rect id="nitro_x5F_rec_x5F_filler" x="84.5" y="102.2" class="st24" width="32.7" height="5"/>
-	<rect id="nitro_x5F_rec" x="84.5" y="102.2" class="st25" width="32.7" height="5"/>
-	<text id="nitro" transform="matrix(1 0 0 1 84.4457 98.9242)" class="st26 st4 st7">Nitro</text>
+	<rect id="nitro_x5F_rec_x5F_filler" x="84.5" y="102.2" class="st25" width="32.7" height="5"/>
+	<rect id="nitro_x5F_rec" x="84.5" y="102.2" class="st26" width="32.7" height="5"/>
+	<text id="nitro" transform="matrix(1 0 0 1 84.4457 98.9242)" class="st27 st4 st7">Nitro</text>
 </g>
 </svg>

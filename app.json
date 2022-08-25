@@ -2,9 +2,9 @@
   "domElement": "<raceui></raceui>",
   "name": "RaceUI",
   "types": [
-    "ui.apps.categories.utility"
+    "ui.apps.categories.racing"
   ],
-  "description": "RaceUI",
+  "description": "UI for racing and that has lot of info inspired by RaceEssentails and SideKick",
   "css": {
     "left": "0px",
     "top": "0px",
