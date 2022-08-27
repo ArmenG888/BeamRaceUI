@@ -1,0 +1,1 @@
+Move this folder into your beamng path: BeamNG.drive\ui\modules\apps\
