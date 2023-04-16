@@ -144,7 +144,7 @@
 		V73C499,79.9,493.4,85.5,486.4,85.5z"/>
 	<text id="g-text" transform="matrix(1 0 0 1 465.4423 72.662)" class="st4 st19">5.1G</text>
 </g>
-<text id="esc" transform="matrix(1 0 0 1 84.4457 84.4481)" class="st24 st4 st7">ECS</text>
+<text id="esc" transform="matrix(1 0 0 1 84.4457 84.4481)" class="st24 st4 st7">ESC</text>
 <text id="abs" transform="matrix(1 0 0 1 110.6521 84.4483)" class="st24 st4 st7">ABS</text>
 <g id="nitro_x5F_layer">
 	<rect id="nitro_x5F_rec_x5F_filler" x="84.5" y="102.2" class="st25" width="32.7" height="5"/>
