@@ -5,7 +5,7 @@
 <style type="text/css">
 	.st0{opacity:0.79;fill:#FFFFFF;enable-background:new    ;}
 	.st1{fill:#B3B3B3;}
-	.st2{opacity:0.6;fill:#E6E6E6;}
+	.st2{opacity:0.6;fill:#E6E6E6;enable-background:new    ;}
 	.st3{fill:#0071BC;}
 	.st4{font-family:'Consolas';}
 	.st5{font-size:11px;}
@@ -24,16 +24,17 @@
 	.st18{font-size:28px;}
 	.st19{font-size:10px;}
 	.st20{font-size:9px;}
-	.st21{opacity:0.6;fill:#E6E6E6;stroke:#B3B3B3;stroke-miterlimit:10;}
+	.st21{display:none;opacity:0.6;fill:#E6E6E6;stroke:#B3B3B3;stroke-miterlimit:10;enable-background:new    ;}
 	.st22{fill:none;}
 	.st23{fill:#E6E6E6;stroke:#999999;stroke-miterlimit:10;}
 	.st24{fill:#ED2024;}
 	.st25{fill:#00FFCF;}
 	.st26{fill:none;stroke:#020202;stroke-miterlimit:10;}
 	.st27{fill:#3B57FF;}
+	.st28{display:none;}
 </style>
-<path id="backgrond" class="st0" d="M986.5,123h-973C6,123,0,117,0,109.6V13.5C0,6,6,0,13.5,0h973.1c7.4,0,13.5,6,13.5,13.5v96.1
-	C1000,117,994,123,986.5,123z"/>
+<path class="st0" d="M1002,13.5v96.1c-0.1,7.4-6.1,13.4-13.6,13.4h-973c-7.5,0-13.5-6-13.5-13.4V13.5C1.8,6,7.8,0,15.3,0h973.1
+	C995.8,0,1002,6,1002,13.5z"/>
 <rect id="rpm" x="191.1" y="9.4" class="st1" width="680.6" height="11.8"/>
 <g id="brake_x5F_temps">
 	<path id="brake_x5F_temps_x5F_rec" class="st2" d="M770.6,78.1h-59c-4.4,0-8-3.6-8-8V35.4c0-4.4,3.6-8,8-8h59c4.4,0,8,3.6,8,8v34.7
@@ -51,17 +52,14 @@
 <text id="rpm_x5F_text" transform="matrix(1 0 0 1 84.4457 21.2893)" class="st4 st8">0 RPM</text>
 <rect id="top_x5F_rpm" x="848.6" y="9.4" class="st11" width="23" height="11.8"/>
 <g id="pedals">
-<path id="pedals_x5F_rec" class="st2" d="M987.83,87.74h-66.85c-4.4,0-7.98-3.57-7.98-7.98V12.91c0-4.4,3.57-7.98,7.98-7.98h66.85
-		c4.4,0,7.98,3.57,7.98,7.98v66.85C995.8,84.17,992.23,87.74,987.83,87.74z"/>
-	<rect id="clutch" x="921.38" y="8.08" class="st1" width="14.47" height="63.22"/>
-	<rect id="gas" x="970.76" y="8.08" class="st1" width="14.47" height="63.22"/>
-	<rect id="brake" x="946.28" y="8.08" class="st1" width="14.47" height="63.22"/>
-	
-		<rect id="clutch_x5F_filler_1_" x="921.38" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1857.2371 79.3748)" class="st11" width="14.47" height="63.22"/>
-	
-		<rect id="brake_x5F_filler" x="946.74" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1907.9474 79.3747)" class="st12" width="14.47" height="63.22"/>
-	
-		<rect id="gas_x5F_filler" x="970.76" y="8.08" transform="matrix(-1 -1.224647e-16 1.224647e-16 -1 1955.991 79.3748)" class="st13" width="14.47" height="63.22"/>
+	<path id="pedals_x5F_rec" class="st2" d="M987.8,87.7H921c-4.4,0-8-3.6-8-8V12.9c0-4.4,3.6-8,8-8h66.8c4.4,0,8,3.6,8,8v66.8
+		C995.8,84.2,992.2,87.7,987.8,87.7z"/>
+	<rect id="clutch" x="921.4" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="gas" x="970.8" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="brake" x="946.3" y="8.1" class="st1" width="14.5" height="63.2"/>
+	<rect id="clutch_x5F_filler_1_" x="921.4" y="8.1" class="st11" width="14.5" height="63.2"/>
+	<rect id="brake_x5F_filler" x="946.7" y="8.1" class="st12" width="14.5" height="63.2"/>
+	<rect id="gas_x5F_filler" x="970.8" y="8.1" class="st13" width="14.5" height="63.2"/>
 	<text id="clutch_x5F_text" transform="matrix(1 0 0 1 916.6714 82.8876)" class="st4 st8">100</text>
 	<text id="brake_x5F_text" transform="matrix(1 0 0 1 942.6429 82.8875)" class="st4 st8">100</text>
 	<text id="gas_x5F_text" transform="matrix(1 0 0 1 967.999 82.8876)" class="st4 st8">100</text>
@@ -130,7 +128,7 @@
 	<path id="front-left-filler-3g" class="st22" d="M345.5,69.7h103.7V27h-83c-11.4,0-20.6,9.2-20.6,20.6L345.5,69.7L345.5,69.7z"/>
 	<path id="front-right-filler-2g_1_" class="st22" d="M554.8,34.9H499v34.8h73.8V53C572.8,43,564.7,34.9,554.8,34.9z"/>
 	<rect id="rear-filler-2g" x="449.6" y="91.8" class="st22" width="49.8" height="12.7"/>
-	<rect id="front-filler-2g" x="449.2" y="34.8" class="st22" width="49.8" height="10.3"/>
+	<rect id="front-filler-2g" x="449.2" y="34.8" class="st22" width="49.8" height="9.7"/>
 	<path id="rear-right-filler-2g" class="st22" d="M554.8,104.5h-55.3V69.7h73.4v16.7C572.8,96.4,564.7,104.5,554.8,104.5z"/>
 	<path id="rear-left-filler-2g" class="st22" d="M393.4,104.5h56.3V69.7h-74.3v16.7C375.3,96.4,383.4,104.5,393.4,104.5z"/>
 	<path id="front-left-filler-2g" class="st22" d="M393.4,34.9h56.3v34.8h-74.3V53C375.3,43,383.4,34.9,393.4,34.9z"/>
@@ -151,4 +149,7 @@
 	<rect id="nitro_x5F_rec" x="84.5" y="102.2" class="st26" width="32.7" height="5"/>
 	<text id="nitro" transform="matrix(1 0 0 1 84.4457 98.9242)" class="st27 st4 st7">Nitro</text>
 </g>
+<rect x="462.5" y="107.2" class="st22" width="30.8" height="16.1"/>
+<rect x="595.6" y="196.2" class="st22" width="3.2" height="0.5"/>
+<rect id="telemtry" x="345.5" y="26.7" class="st28" width="257.6" height="81.3" display="none" fill="red"/>
 </svg>

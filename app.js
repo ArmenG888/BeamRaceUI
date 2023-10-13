@@ -29,8 +29,14 @@ angular.module('beamng.apps')
 									best_lap = -1;
 									offset = 0;
 				element.on('load', function () {
+					
 					let svg = element[0].contentDocument
 					let values = []
+					svg.getElementById('g-force-rec').addEventListener('click', function() {
+						console.log("")
+						svg.getElementById('g-force-rec').style.display = "none";
+						svg.getElementById('telemtry').style.display = "inline";
+					});
 					svg.getElementById('lap_x5F_times').style.display = "none";
 					svg.getElementById('boost_x5F_rec_1_').style.display = "none";
 					svg.getElementById('boost_x5F_filler_1_').style.display = "none";
